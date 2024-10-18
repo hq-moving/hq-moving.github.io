@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hq-moving.github.io/static/css/main.96ab0720.css",
-    "main.js": "/hq-moving.github.io/static/js/main.d41b20ca.js",
+    "main.js": "/hq-moving.github.io/static/js/main.494a23e9.js",
     "static/media/consultation.svg": "/hq-moving.github.io/static/media/consultation.ede9466b3634733f30c8d1a1b7bbe939.svg",
     "static/media/web-dev.svg": "/hq-moving.github.io/static/media/web-dev.fd61237124f5b922e412437caf61ea58.svg",
     "static/media/hosting.svg": "/hq-moving.github.io/static/media/hosting.b755d3eebb287dde8fcd287cb1d5653e.svg",
@@ -13,10 +13,10 @@
     "index.html": "/hq-moving.github.io/index.html",
     "static/media/hero-bg.svg": "/hq-moving.github.io/static/media/hero-bg.2237f2b6be81c21a80a6.svg",
     "main.96ab0720.css.map": "/hq-moving.github.io/static/css/main.96ab0720.css.map",
-    "main.d41b20ca.js.map": "/hq-moving.github.io/static/js/main.d41b20ca.js.map"
+    "main.494a23e9.js.map": "/hq-moving.github.io/static/js/main.494a23e9.js.map"
   },
   "entrypoints": [
     "static/css/main.96ab0720.css",
-    "static/js/main.d41b20ca.js"
+    "static/js/main.494a23e9.js"
   ]
 }
