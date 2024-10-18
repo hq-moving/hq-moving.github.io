@@ -11,3 +11,6 @@
     
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+
+    
+  "homepage": "https://hq-moving.github.io/hq-moving.github.io"
