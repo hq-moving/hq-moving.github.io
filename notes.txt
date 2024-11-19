@@ -14,3 +14,7 @@
 
     
   "homepage": "https://hq-moving.github.io/hq-moving.github.io"
+
+
+  This sentence but for movers:
+  We are a team of highly motivated and skilled developers dedicated to delivering only the best software.
