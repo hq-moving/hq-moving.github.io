@@ -87,8 +87,8 @@ const Contact = () => {
 
                     <div className="w-full bg-white p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
                         <div className="flex">
-                            <h1 className="font-bold text-center lg:text-left text-blue-900 uppercase text-4xl">Send us a message</h1>
-                        </div>
+                            <h1 className="font-bold text-center lg:text-left text-blue-900 uppercase text-4xl">Call Us, Text us, send us an email</h1>
+                       </div>{/*
                         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
                                 <div>
                                     <input 
@@ -168,7 +168,16 @@ const Contact = () => {
                                     focus:outline-none focus:shadow-outline">
                                 Send Message
                             </button>
-                        </div>
+                        </div>*/}
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                 </div>
                 </form>
                         <div
