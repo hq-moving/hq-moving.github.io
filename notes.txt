@@ -14,3 +14,36 @@
 
     
   "homepage": "https://hq-moving.github.io/hq-moving.github.io"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Notes for godaddy for github opages
+  	185.199.108.153
+    185.199.109.153
+    185.199.110.153
+    185.199.111.153
+Type A
+
+
+CNAME
+hq-moving.github.io
+
