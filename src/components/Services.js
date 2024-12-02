@@ -22,12 +22,20 @@ const Services = () => {
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                             
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                                <div className="m-2 text-justify text-sm">
+                                <div className="m-2 text-justify text-sm"  display="flex" textAlign="center">
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center">Moving</h2>
+                                    <h2 className="font-semibold my-4 text-2xl text-center">Residential Moving</h2>
                                     <p className="text-md font-medium">
+                                    Packing and Unpacking<br />
+                                    Loading and Unloading<br />
+                                    Transportation<br />
+                                    Storage<br />
+                                    Special Handling<br />
+                                    Assembly/Disassembly
+                                    {/*
                                     We specialize in delivering high-quality residential and commercial moving services for clients of all sizes, ensuring smooth transitions and exceptional care for your 
                                     belongings. Providing reliable, efficient, and stress-free moving solutions tailored to your needs. Services include office and home relocation, internal moves, and building cleanouts. 
+                                    */}
                                     </p>
                                 </div>
                             </div>
@@ -35,10 +43,18 @@ const Services = () => {
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                                 <div className="m-2 text-justify text-sm">
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img2} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center">Installation</h2>
+                                    <h2 className="font-semibold my-4 text-2xl text-center">Commercial/Office Moving</h2>
                                     <p className="text-md font-medium">
+                                    Space Planning<br />
+                                    Furniture Disassembly/Assembly<br />
+                                    Equipment Handling<br />
+                                    On-Site Coordination<br />
+                                    Specialized Moves
+
+                                        {/*
                                         We provide high-quality, customized residential and commercial installation services, including cubicle setup, wall mounting, and workspace optimization, designed for precision, efficiency, 
                                         and long-lasting functionality.
+                                        */}
                                     </p>
                                 </div>
                             </div>
@@ -46,9 +62,17 @@ const Services = () => {
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                                 <div className="m-2 text-justify text-sm">
                                     <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center ">Space Solutions Specialist</h2>
+                                    <h2 className="font-semibold my-4 text-2xl text-center ">Office Furniture Installation</h2>
                                     <p className="text-md font-medium">
+                                    Furniture Assembly<br />
+                                    Space Planning<br />
+                                    Reconfigure Services<br />
+                                    Delivery and Setup<br />
+                                    Decommissioning
+
+                                    {/**
                                     expertise includes moving and setup, furniture assembly and repair, mounting and installation of various items, office reorganization, cubicle maintenance, disposal services, and specialized tasks like shelving, packing, and light handyman work. TV mounting, standing desk assembly, picture hanging, etc.
+                                    */}
                                     </p>
                                 </div>
                             </div>
@@ -58,10 +82,15 @@ const Services = () => {
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
                                     <h2 className="font-semibold my-4 text-2xl text-center ">Other Services</h2>
                                     <p className="text-md font-medium">
+                                    Moving Supplies<br />
+                                    Cleaning Services<br />
+                                    Insurance
+                                        {/*
                                         Subcontracting for other moving and installation companies. <br />
                                         Storage and Management. <br />
                                         Recieving and delivery. <br />
                                         Misc. handyman services.
+                                    */}
                                     </p>
                                 </div>
                             </div>                    
