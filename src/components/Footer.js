@@ -16,10 +16,9 @@ const Footer = () => {
                         <div className="box-border border-b-4 border-blue-900 p-8 bg-gray-200 text-gray-600 text-center rounded-lg xl:w-80 mx-auto">
                             <h3 className="font-bold text-4xl mb-4">HEADQUARTERS MOVING</h3>
                             <div className='text-md font-medium text-gray-600'>
-                                <h5>Your Move. Our Mission.</h5><br />
-                                <p>Serving the Treasure Coast,</p>
-                                <p>Port Saint Lucie,</p>
-                                <p>Florida.</p>
+                                <h5>(772) 207-3720</h5><br />
+                                <h5>HeadquartersMovers@gmail.com</h5><br />
+                                <p>Serving the Treasure Coast and all of Florida</p>
                             </div>
                         </div>
                     </div>
@@ -102,10 +101,7 @@ const Footer = () => {
                 <div className="w-full md:w-4/12 px-4 mx-auto text-center py-2">
                     <div className="text-sm text-gray-200 font-semibold py-1">
                     Copyright &copy; {new Date().getFullYear()}{"  "}
-                    <HashLink
-                        to="#"
-                        className=" hover:text-gray-900"
-                    >
+                    <HashLink to="#" className=" hover:text-gray-900">
                         Headquarters Moving LLC
                     </HashLink>. All rights reserved.
                     </div>
