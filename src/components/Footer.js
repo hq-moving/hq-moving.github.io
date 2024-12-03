@@ -14,9 +14,9 @@ const Footer = () => {
                     {/* 1st block */}
                     <div className="col-span-12 lg:col-span-4">
                         <div className="box-border border-b-4 border-blue-900 p-8 bg-gray-200 text-gray-600 text-center rounded-lg xl:w-80 mx-auto">
-                            <h3 className="font-bold text-4xl mb-4">Headquarters Moving</h3>
+                            <h3 className="font-bold text-4xl mb-4">HEADQUARTERS MOVING</h3>
                             <div className='text-md font-medium text-gray-600'>
-                                <h5></h5>
+                                <h5>Your Move. Our Mission.</h5><br />
                                 <p>Serving the Treasure Coast,</p>
                                 <p>Port Saint Lucie,</p>
                                 <p>Florida.</p>
@@ -42,9 +42,9 @@ const Footer = () => {
 
                     {/* 3rd block */}
                     <div className="col-span-6 md:col-span-6 lg:col-span-4 mx-auto">
-                        <h6 className="text-[#013289] text-xl font-bold mb-4">OUR SERVICES</h6>
+                        <h6 className="text-[#013289] text-xl font-bold mb-4">OTHER PLATFORMS</h6>
                         <ul className="text-md">
-                        <li className="mb-2">
+                        {/*<li className="mb-2">
                             <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Moving</Link>
                         </li>
                         <li className="mb-2">
@@ -55,11 +55,19 @@ const Footer = () => {
                         </li>
                         <li className="mb-2">
                             <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Other Services</Link>
+                        </li>*/}
+                        <li className="mb-2">
+                            <Link to="https://www.homeadvisor.com/rated.HeadquartersMovingLLC.118783338.html" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
+                                Find us on HomeAdvisor Powered by Angi</Link>
+                        </li>
+                        <li className="mb-2">
+                            <Link to="https://www.angi.com/companylist/us/fl/port-st-lucie/headquarters-moving-llc-reviews-10657889.htm" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
+                                Angi Profile and Reviews</Link>
                         </li>
                         </ul>
                     </div>
 
-                    {/* 4th block */}
+                    {/* 4th block 
                     <div className="col-span-12 text-center mx-auto lg:col-span-3 font-bold uppercase text-blue-900">
                         <div className="text-xl mb-6">
                             Social Media Links.
@@ -87,7 +95,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                     </div>          
-
+*/}
                     </div>
 
                     <div className="flex flex-wrap items-center md:justify-between justify-center mx-auto px-4">
@@ -98,7 +106,7 @@ const Footer = () => {
                         to="#"
                         className=" hover:text-gray-900"
                     >
-                        Molad e Konsult
+                        Headquarters Moving LLC
                     </HashLink>. All rights reserved.
                     </div>
                 </div>
