@@ -1,14 +1,15 @@
 import React from 'react';
-import img from '../images/web.svg'; 
 import mvgChImg from '../images/movingCouch.jpg';
 import ComMvgImg from '../images/comMvg.jpg'; 
-import officeImg from '../images/officeImg.jpg'; 
 import cubeImg from '../images/cubeImg.jpg';
 import otherImg from '../images/otherImg.jpg';  
+{/*
+import img from '../images/web.svg'; 
+import officeImg from '../images/officeImg.jpg'; 
 import img2 from '../images/app.svg';
 import img3 from '../images/hosting.svg';
 import img4 from '../images/consultation.svg';
-
+*/}
 const Services = () => {
 
     return (
