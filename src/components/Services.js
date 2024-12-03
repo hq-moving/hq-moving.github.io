@@ -25,7 +25,7 @@ const Services = () => {
                                 <div className="m-2 text-justify text-sm"  display="flex" textAlign="center">
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img} />
                                     <h2 className="font-semibold my-4 text-2xl text-center">Commercial and Residential Moving</h2>
-                                    <p className="text-md font-medium">
+                                    <p className="text-md font-medium"  display="flex" textAlign="center">
                                     Packing and Unpacking<br />
                                     Loading and Unloading<br />
                                     Transportation<br />
