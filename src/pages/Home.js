@@ -10,7 +10,7 @@ import Services from '../components/Services';
 
 const Home = () => {
     return (
-        <>
+        <><br />
             <Hero />
             <Intro />
             <Services />
