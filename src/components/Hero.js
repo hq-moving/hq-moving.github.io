@@ -23,7 +23,7 @@ const Hero = () => {
                             <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">Reliable Residential and Commercial Moving Services!
                                   Are you planning a move? Headquarters Moving LLC is your trusted partner for seamless relocations across the Treasure Coast 
                                   and all of Florida. With tailored solutions, a highly skilled team, and a commitment to exceptional care, we make every move
-                                   stress-free. Contact us now for a free quote and experience the difference.</div>
+                                   stress-free. Contact us now for a free estimate and experience the difference.</div>
                             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
                                 <Link to="/contact" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0">
                                     Free Estimate
