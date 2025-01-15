@@ -32,12 +32,13 @@ const Services = () => {
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={mvgChImg} />
                                     <h2 className="font-semibold my-4 text-2xl text-center">Residential Moving</h2>
                                     <p className="text-md font-medium"  display="flex" textAlign="center">
-                                    Packing and Unpacking<br />
-                                    Loading and Unloading<br />
-                                    Transportation<br />
-                                    Storage<br />
-                                    Special Handling<br />
-                                    Assembly/Disassembly
+                                    Searching for professional residential movers? Headquarters Moving LLC offers a full range of residential moving services designed to simplify your move: <br /> <br />   
+                                    <b>Packing and Unpacking: </b>Safe handling of items with premium packing materials.<br /><br /> 
+                                    <b>Loading and Unloading: </b>Careful management of your belongings during transport.<br /><br /> 
+                                    <b>Transportation: </b>Reliable vehicles for secure item delivery.<br /><br /> 
+                                    <b>Storage Solutions: </b>Short-term and long-term options for flexible storage.<br /><br /> 
+                                    <b>Special Handling: </b>Expertise in moving delicate items, including TVs and glass tables.<br /><br /> 
+                                    <b>Furniture Assembly and Disassembly: </b>Comprehensive setup and breakdown services.
                                     {/*
                                     We specialize in delivering high-quality residential and commercial moving services for clients of all sizes, ensuring smooth transitions and exceptional care for your 
                                     belongings. Providing reliable, efficient, and stress-free moving solutions tailored to your needs. Services include office and home relocation, internal moves, and building cleanouts. 
@@ -51,12 +52,12 @@ const Services = () => {
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={ComMvgImg} />
                                     <h2 className="font-semibold my-4 text-2xl text-center">{`Commercial Moving`}</h2>
                                     <p className="text-md font-medium">
-                                    Space Planning<br />
-                                    Furniture Disassembly/Assembly<br />
-                                    Equipment Handling<br />
-                                    On-Site Coordination<br />
-                                    Specialized Moves
-
+                                    Looking to relocate your business? We specialize in efficient commercial moving services to minimize downtime and ensure a smooth transition:<br/><br/>
+                                    <b>Space Planning: </b>Strategic layouts for optimized functionality.<br /><br />
+                                    <b>Furniture Disassembly and Assembly: </b>Seamless handling of office furniture.<br /><br />
+                                    <b>Equipment Handling: </b>Professional care for specialized business equipment.<br /><br />
+                                    <b>On-Site Coordination: </b>Dedicated project management for stress-free moves.<br /><br />
+                                    <b>Specialized Moves:</b>Custom solutions tailored to unique business needs.<br /><br />
                                         {/*
                                         We provide high-quality, customized residential and commercial installation services, including cubicle setup, wall mounting, and workspace optimization, designed for precision, efficiency, 
                                         and long-lasting functionality.
@@ -70,11 +71,11 @@ const Services = () => {
                                     <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={cubeImg} />
                                     <h2 className="font-semibold my-4 text-2xl text-center ">Office Furniture Installation</h2>
                                     <p className="text-md font-medium">
-                                    Furniture Assembly<br />
-                                    Space Planning<br />
-                                    Reconfigure Services<br />
-                                    Delivery and Setup<br />
-                                    Decommissioning
+                                    Maximize productivity with our office furniture installation solutions:<br /><br />
+                                    <b>Assembly and Space Planning:</b> Expert setup and organization for your workspace.<br /><br />
+                                    <b>Reconfigure Services:</b> Adapt layouts to meet evolving business demands.<br /><br />
+                                    <b>Delivery and Setup:</b> Reliable delivery and installation of office furniture.<br /><br />
+                                    <b>Decommissioning:</b> Eco-friendly disposal and recycling services for outdated furniture.<br /><br />
 
                                     {/**
                                     expertise includes moving and setup, furniture assembly and repair, mounting and installation of various items, office reorganization, cubicle maintenance, disposal services, and specialized tasks like shelving, packing, and light handyman work. TV mounting, standing desk assembly, picture hanging, etc.
@@ -88,9 +89,10 @@ const Services = () => {
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={otherImg} />
                                     <h2 className="font-semibold my-4 text-2xl text-center ">Other Services</h2>
                                     <p className="text-md font-medium">
-                                    Moving Supplies<br />
-                                    Cleaning Services<br />
-                                    Insurance
+                                    We offer a variety of add-on services to enhance your moving experience:<br /><br />
+                                    <b>Moving Supplies:</b> Access to high-quality packing materials.<br /><br />
+                                    <b>Cleaning Services:</b> Comprehensive cleaning for vacated spaces.<br /><br />
+                                    <b>Insurance Options:</b> Coverage to protect your valuables during the move.<br /><br />
                                         {/*
                                         Subcontracting for other moving and installation companies. <br />
                                         Storage and Management. <br />
@@ -115,7 +117,7 @@ const Services = () => {
                             font-bold">Your <span className='font-black'>Move</span></h3>
                             <div>
                                 <p className='my-3 text-xl text-gray-600 font-semibold'>
-                                We specialize in delivering high-quality residential and commercial moving services for clients of all sizes, ensuring smooth transitions and exceptional care for your belongings. Providing reliable, efficient, and stress-free moving solutions tailored to your needs.
+                                At Headquarters Moving LLC, our mission is to provide reliable, efficient, and personalized moving solutions.
                                 </p>
                             </div>
                         </div>
@@ -125,7 +127,8 @@ const Services = () => {
                             </div>
                             <h3 className="text-3xl  text-blue-900 font-bold">Our <span className='font-black'>Mission</span></h3>
                             <div>
-                                <p className='my-3 text-xl text-gray-600 font-semibold'>We work closely with you to manage both residential and commercial moves, tailoring our services to fit your unique requirements and ensuring a smooth, efficient transition.</p>
+                                <p className='my-3 text-xl text-gray-600 font-semibold'>
+                                By focusing on customer satisfaction, we ensure that every relocation is smooth, seamless, and stress-free.</p>
                             </div>
                         </div>
                     </div>
