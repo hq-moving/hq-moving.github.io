@@ -63,6 +63,14 @@ const Footer = () => {
                             <Link to="https://www.angi.com/companylist/us/fl/port-st-lucie/headquarters-moving-llc-reviews-10657889.htm" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
                                 Angi Profile and Reviews</Link>
                         </li>
+                        <li className="mb-2">
+                            <Link to="https://www.thumbtack.com/fl/port-saint-lucie/movers/headquarters-moving-llc/service/538343591400620035" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
+                                Thumbtack</Link>
+                        </li>
+                        <li className="mb-2">
+                            <Link to="https://www.google.com/search?q=Headquarters+Moving&stick=H4sIAAAAAAAA_-NgU1I1qDBJMU60TEs0NTdNS0o0SjO2MqiwSDZPSbIwNzMAiqckmRovYhX2SE1MKSxNLCpJLSpW8M0vy8xLBwBUByJcPwAAAA&hl=en&mat=CboT62px2PJoElcBmzl_pTlzEHzePD8Ll_2_ewwvikee4JOdpg_ytOJx_aAuX5tOH_me46aCEre7KXYJVw1YeidrfmtSzMi4nCrIj2ABeB5oAek-PxohlJWgX6U5er0j9M0&authuser=0#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
+                                Google Business</Link>
+                        </li>
                         </ul>
                     </div>
 
