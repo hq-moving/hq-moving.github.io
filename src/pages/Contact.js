@@ -200,7 +200,7 @@ const Contact = () => {
                         </div>
 
                         <div className="flex flex-col">
-                        <h2 className="text-2xl">Call Us</h2>
+                        <h2 className="text-2xl">Call Us or Text Us!</h2>
                         <p className="text-gray-400">Tel: 772-207-3720</p>
                         
                             <div className='mt-5'>
