@@ -16,25 +16,37 @@ const Footer = () => {
                         <div className="box-border border-b-4 border-blue-900 p-8 bg-gray-200 text-gray-600 text-center rounded-lg xl:w-80 mx-auto">
                             <h3 className="font-bold text-4xl mb-4">HEADQUARTERS MOVING</h3>
                             <div className='text-md font-medium text-gray-600'>
-                                <h5>(772) 207-3720</h5><br />
-                                <h5>HeadquartersMovers@gmail.com</h5><br />
+                                <a href="tel:17722073720">
+                                    <h5>(772) 207-3720</h5>
+                                </a><br />
+                                <a href="mailto:headquartersmovers@gmail.com">
+                                <h5>HeadquartersMovers@gmail.com</h5>
+                                </a><br />
                                 <p>Serving the Treasure Coast and all of Florida</p>
                             </div>
                         </div>
                     </div>
-
+                    {/*<a className="text-gray-400" href="tel:17722073720">
+                                    Click here to Call Us!
+                                </a><br></br>
+                                <a className="text-gray-400" href="sms:17722073720">
+                                    Click here to Text Us!
+                                </a><br></br>
+                                <a className="text-gray-400" href="mailto:headquartersmovers@gmail.com">
+                                    Click here to Email Us!
+    </a> */}
                     {/* 2nd block */}
                     <div className="col-span-6 md:col-span-6 lg:col-span-1 ml-7 mx-auto">
                         <h6 className="text-[#013289] text-xl font-bold mb-4">LINKS</h6>
                         <ul className="text-md">
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About</HashLink>
+                            <HashLink to="#about" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About</HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
+                            <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</HashLink>
+                            <HashLink to="/contact#contact" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</HashLink>
                         </li>                            
                         </ul>
                     </div>
