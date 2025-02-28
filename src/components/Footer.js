@@ -35,24 +35,10 @@ const Footer = () => {
                                 <a className="text-gray-400" href="mailto:headquartersmovers@gmail.com">
                                     Click here to Email Us!
     </a> */}
-                    {/* 2nd block */}
-                    <div className="col-span-6 md:col-span-6 lg:col-span-1 ml-7 mx-auto">
-                        <h6 className="text-[#013289] text-xl font-bold mb-4">LINKS</h6>
-                        <ul className="text-md">
-                        <li className="mb-2">
-                            <HashLink to="/#about" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About</HashLink>
-                        </li>
-                        <li className="mb-2">
-                            <HashLink to="/#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
-                        </li>
-                        <li className="mb-2">
-                            <HashLink to="/contact#contact" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</HashLink>
-                        </li>                            
-                        </ul>
-                    </div>
+                    
 
                     {/* 3rd block */}
-                    <div className="col-span-6 md:col-span-6 lg:col-span-4 mx-auto">
+                    <div className="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 mx-auto">
                         <h6 className="text-[#013289] text-xl font-bold mb-4">OTHER PLATFORMS</h6>
                         <ul className="text-md">
                         {/*<li className="mb-2">
@@ -68,6 +54,10 @@ const Footer = () => {
                             <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Other Services</Link>
                         </li>*/}
                         <li className="mb-2">
+                            <Link to="https://www.google.com/search?q=Headquarters+Moving&stick=H4sIAAAAAAAA_-NgU1I1qDBJMU60TEs0NTdNS0o0SjO2MqiwSDZPSbIwNzMAiqckmRovYhX2SE1MKSxNLCpJLSpW8M0vy8xLBwBUByJcPwAAAA&hl=en&mat=CboT62px2PJoElcBmzl_pTlzEHzePD8Ll_2_ewwvikee4JOdpg_ytOJx_aAuX5tOH_me46aCEre7KXYJVw1YeidrfmtSzMi4nCrIj2ABeB5oAek-PxohlJWgX6U5er0j9M0&authuser=0#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
+                                Google Business</Link>
+                        </li>
+                        <li className="mb-2">
                             <Link to="https://www.homeadvisor.com/rated.HeadquartersMovingLLC.118783338.html" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
                                 Find us on HomeAdvisor Powered by Angi</Link>
                         </li>
@@ -79,13 +69,43 @@ const Footer = () => {
                             <Link to="https://www.thumbtack.com/fl/port-saint-lucie/movers/headquarters-moving-llc/service/538343591400620035" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
                                 Thumbtack</Link>
                         </li>
-                        <li className="mb-2">
-                            <Link to="https://www.google.com/search?q=Headquarters+Moving&stick=H4sIAAAAAAAA_-NgU1I1qDBJMU60TEs0NTdNS0o0SjO2MqiwSDZPSbIwNzMAiqckmRovYhX2SE1MKSxNLCpJLSpW8M0vy8xLBwBUByJcPwAAAA&hl=en&mat=CboT62px2PJoElcBmzl_pTlzEHzePD8Ll_2_ewwvikee4JOdpg_ytOJx_aAuX5tOH_me46aCEre7KXYJVw1YeidrfmtSzMi4nCrIj2ABeB5oAek-PxohlJWgX6U5er0j9M0&authuser=0#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
-                                Google Business</Link>
-                        </li>
+                        
                         </ul>
                     </div>
 
+                    {/* Reviews block */}
+                    <div className="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 mx-auto">
+                        <h6 className="text-[#013289] text-xl font-bold mb-4">REVIEWS</h6>
+                        <ul className="text-md">
+                        <li className="mb-2">
+                            <Link to="https://g.page/r/CVPb-gl2uH2MEAI/review" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
+                                Leave a Google Review</Link>
+                        </li>
+                        <li className="mb-2">
+                            <Link to="https://www.angi.com/write-review/26643364" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
+                                Leave an Angi Review</Link>
+                        </li>
+                        <li className="mb-2">
+                            <Link to="https://www.homeadvisor.com/review/118783338?hired=unknown" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">
+                                Leave a HomeAdvisor Review</Link>
+                        </li>
+                        </ul>
+                    </div>
+                    {/* 2nd block */}
+                    <div className="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 mx-auto">
+                        <h6 className="text-[#013289] text-xl font-bold mb-4">LINKS</h6>
+                        <ul className="text-md">
+                        <li className="mb-2">
+                            <HashLink smooth to="/#about" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About</HashLink>
+                        </li>
+                        <li className="mb-2">
+                            <HashLink smooth to="/#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
+                        </li>
+                        <li className="mb-2">
+                            <HashLink smooth to="/contact#contact" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</HashLink>
+                        </li>                            
+                        </ul>
+                    </div>
                     {/* 4th block 
                     <div className="col-span-12 text-center mx-auto lg:col-span-3 font-bold uppercase text-blue-900">
                         <div className="text-xl mb-6">
