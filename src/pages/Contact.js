@@ -222,8 +222,7 @@ const Contact = () => {
                         <br />
                 </div>
                 </form>
-                        <div
-                            className="w-full  lg:-mt-96 lg:w-2/6 px-8 py-6 ml-auto bg-blue-900 rounded-2xl">
+                        <div className="w-full  lg:-mt-96 lg:w-2/6 px-8 py-6 ml-auto bg-blue-900 rounded-2xl">
                             <div className="flex flex-col text-white">
                                 
                                 <div className="flex my-4 w-2/3 lg:w-3/4">
@@ -244,21 +243,26 @@ const Contact = () => {
                             <div className="flex flex-col">
                                 <h2 className="text-2xl">Call Us or Text Us</h2>
                                 <p className="text-gray-400">Tel: 772-207-3720</p>
-                                <a href="tel:17722073720">
-                                    Click here to Call Us!
-                                </a>
-                                <a href="sms:17722073720">
-                                    Click here to Text Us!
-                                </a>
+                                
                                 
                                 <div className='mt-5'>
                                 <h2 className="text-2xl">Send an E-mail</h2>
                                 <p className="text-gray-400">Headquartersmovers@gmail.com</p>
-                                <a href="mailto:headquartersmovers@gmail.com">
+                                <br></br>
+                                <h2 className="text-2xl">Mobile Links</h2>
+                                <a className="text-gray-400" href="tel:17722073720">
+                                    Click here to Call Us!
+                                </a><br></br>
+                                <a className="text-gray-400" href="sms:17722073720">
+                                    Click here to Text Us!
+                                </a><br></br>
+                                <a className="text-gray-400" href="mailto:headquartersmovers@gmail.com">
                                     Click here to Email Us!
                                 </a>
                                 </div>
-                            </div>    
+                            </div>
+                             
+                               
                         </div>{/* 
                             <div className="my-2 w-1/2 lg:w-2/4">
                             <button type="submit" id="emailBtn" href="mailto:headquartersmovers@gmail.com" className="uppercase text-sm font-bold tracking-wide bg-gray-500 hover:bg-blue-900 text-gray-100 p-3 rounded-lg w-full 
