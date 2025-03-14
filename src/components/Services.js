@@ -2,7 +2,12 @@ import React from 'react';
 import mvgChImg from '../images/movingCouch.jpg';
 import ComMvgImg from '../images/comMvg.jpg'; 
 import cubeImg from '../images/cubeImg.jpg';
-import otherImg from '../images/otherImg.jpg';  
+import otherImg from '../images/otherImg.jpg'; 
+import boxesImg from '../images/boxes.png'; 
+import bedImg from '../images/bed.png';
+import deskImg from '../images/desk_small.png';
+import wrapImg from '../images/wrapped.png'
+import dolliesImg from '../images/Dollies.png'
 {/*
 import img from '../images/web.svg'; 
 import officeImg from '../images/officeImg.jpg'; 
@@ -29,7 +34,7 @@ const Services = () => {
                             
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                                 <div className="m-2 text-justify text-sm"  display="flex" textAlign="center">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={mvgChImg} />
+                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={wrapImg} />
                                     <h2 className="font-semibold my-4 text-2xl text-center">Residential Moving</h2>
                                     <p className="text-md font-medium"  display="flex" textAlign="center">
                                     Searching for professional residential movers? Headquarters Moving LLC offers a full range of residential moving services designed to simplify your move: <br /> <br />   
@@ -49,7 +54,7 @@ const Services = () => {
 
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                                 <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={ComMvgImg} />
+                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={dolliesImg} />
                                     <h2 className="font-semibold my-4 text-2xl text-center">{`Commercial Moving`}</h2>
                                     <p className="text-md font-medium">
                                     Looking to relocate your business? We specialize in efficient commercial moving services to minimize downtime and ensure a smooth transition:<br/><br/>
@@ -68,7 +73,7 @@ const Services = () => {
 
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                                 <div className="m-2 text-justify text-sm">
-                                    <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={cubeImg} />
+                                    <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={deskImg} />
                                     <h2 className="font-semibold my-4 text-2xl text-center ">Office Furniture Installation</h2>
                                     <p className="text-md font-medium">
                                     Maximize productivity with our office furniture installation solutions:<br /><br />
@@ -86,7 +91,7 @@ const Services = () => {
 
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                                 <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={otherImg} />
+                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={boxesImg} />
                                     <h2 className="font-semibold my-4 text-2xl text-center ">Other Services</h2>
                                     <p className="text-md font-medium">
                                     We offer a variety of add-on services to enhance your moving experience:<br /><br />
