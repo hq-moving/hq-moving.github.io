@@ -1,9 +1,10 @@
 import React from 'react';
-import img from '../images/Web-developer.svg';
+/*import img from '../images/Web-developer.svg';
 import GNAimg from '../images/George_and_Alex_Moving_Fran.jpg';
 import dolliesImg from '../images/Dollies.png';
 import trucksImg from '../images/trucks.png';
-import hqtruckImg from '../images/hqtruck1.png'
+import hqtruckImg from '../images/hqtruck1.png';*/
+import wrapImg from '../images/wrap.jpg';
 import { Link } from 'react-router-dom';
 
 const Intro = () => {
@@ -14,7 +15,7 @@ const Intro = () => {
                     <div className="flex flex-col-reverse lg:flex-row py-8 justify-between lg:text-left" data-aos="fade-up">
                         <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center">
                             {/*<img alt="card img" className="rounded-t float-right" src={img} />*/}
-                            <img alt="card img" className="rounded-t float-right" src={hqtruckImg} />
+                            <img alt="card img" className="rounded-t float-right" src={wrapImg} />
                         </div>
                         <div className="flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8" data-aos="zoom-in" data-aos-delay="500">
                             
