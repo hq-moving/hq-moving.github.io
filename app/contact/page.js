@@ -2,6 +2,7 @@ import NavBar from '@/components/Navbar/NavBar';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import PictureImage from '@/components/PictureImage';
+import PageContainer from '@/components/PageContainer';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata, localBusinessSchema } from '@/lib/seo';
 
@@ -18,18 +19,19 @@ export default function ContactPage() {
       <JsonLd data={localBusinessSchema()} />
       <NavBar />
       <main id="contact" className="pt-24 pb-12 bg-white">
-        <div className="container mx-auto px-4 lg:px-20" data-aos="zoom-in">
-          <h1 className="text-3xl md:text-5xl font-bold text-blue-900 mb-8 text-center">Contact Us</h1>
-          <div className="mx-auto max-w-3xl space-y-8">
+        <PageContainer data-aos="zoom-in">
+          <h1 className="text-3xl md:text-5xl font-bold text-brand mb-8 text-center">Contact Us</h1>
+          <div className="mx-auto max-w-3xl 2xl:max-w-4xl space-y-8">
             <PictureImage
               src="/images/contact1.jpg"
               alt="Contact Headquarters Moving for office furniture installation and moving services"
-              width={1200}
-              height={675}
-              className="rounded-2xl shadow-xl w-full h-auto object-cover max-h-[420px] md:max-h-[520px]"
+              width={1400}
+              height={788}
+              sizes="(min-width: 1536px) 896px, 768px"
+              className="rounded-2xl shadow-xl w-full h-auto object-cover max-h-[420px] md:max-h-[520px] xl:max-h-[560px]"
             />
             <ContactForm />
-            <div className="w-full px-8 py-6 bg-blue-900 rounded-2xl text-white">
+            <div className="w-full px-8 py-6 bg-brand rounded-2xl text-white">
               <h2 className="text-2xl text-white">Our Office is Located in</h2>
               <p className="text-white mt-1">Port Saint Lucie, Florida</p>
               <a
@@ -51,8 +53,9 @@ export default function ContactPage() {
               >
                 Headquartersmovers@gmail.com
               </a>
-            </div>          </div>
-        </div>
+            </div>
+          </div>
+        </PageContainer>
       </main>
       <Footer />
     </>

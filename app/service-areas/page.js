@@ -45,24 +45,24 @@ export default function ServiceAreasPage() {
       <NavBar />
       <main className="pt-24 pb-12">
         <div className="max-w-6xl mx-auto px-4 md:px-12">
-          <h1 className="text-3xl md:text-5xl font-bold text-blue-900 text-center mb-4">Areas We Serve</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-brand text-center mb-4">Areas We Serve</h1>
           <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-12">
             Based in Port Saint Lucie, we provide office furniture installation throughout the Treasure Coast and
             Florida, plus interstate moving and installation projects to and from other states.
           </p>
 
-          <section className="mb-12 bg-blue-50 rounded-2xl p-8 border border-blue-100">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Services Available in Every Area</h2>
+          <section className="mb-12 bg-brand-light rounded-2xl p-8 border border-brand-light">
+            <h2 className="text-2xl font-bold text-brand mb-4">Services Available in Every Area</h2>
             <ul className="grid sm:grid-cols-2 gap-3">
               {areaServices.map((item) => (
                 <li key={item} className="text-gray-700 flex items-center gap-2">
-                  <span className="text-blue-900 font-bold">✓</span> {item}
+                  <span className="text-brand font-bold">✓</span> {item}
                 </li>
               ))}
             </ul>
             <Link
               href="/services/interstate-installation-moving"
-              className="inline-block mt-6 text-blue-900 font-semibold hover:underline"
+              className="inline-block mt-6 text-brand font-semibold hover:underline"
             >
               Learn about interstate installation &amp; moving →
             </Link>
@@ -71,11 +71,11 @@ export default function ServiceAreasPage() {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {serviceAreas.map((area) => (
               <div key={area.region} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                <h2 className="text-xl font-bold text-blue-900 mb-4">{area.region}</h2>
+                <h2 className="text-xl font-bold text-brand mb-4">{area.region}</h2>
                 <ul className="space-y-2">
                   {area.cities.map((city) => (
                     <li key={city} className="text-gray-600 flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-900 rounded-full flex-shrink-0" /> {city}
+                      <span className="w-2 h-2 bg-brand rounded-full flex-shrink-0" /> {city}
                     </li>
                   ))}
                 </ul>
@@ -83,17 +83,17 @@ export default function ServiceAreasPage() {
             ))}
           </div>
 
-          <section className="bg-blue-900 text-white rounded-2xl p-8 text-center">
+          <section className="bg-brand text-white rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold mb-4">Florida &amp; Interstate Coverage</h2>
             <p className="text-lg mb-6 opacity-90">
               We handle projects across Florida and travel for interstate moves and out-of-state furniture installation.
               Call (772) 207-3720 for a free estimate.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/services/interstate-installation-moving" className="bg-white text-blue-900 px-8 py-3 rounded-2xl font-bold inline-block">
+              <Link href="/services/interstate-installation-moving" className="bg-white text-brand px-8 py-3 rounded-2xl font-bold inline-block">
                 Interstate Services
               </Link>
-              <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-2xl font-bold inline-block hover:bg-white hover:text-blue-900">
+              <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-2xl font-bold inline-block hover:bg-white hover:text-brand">
                 Get in Touch
               </Link>
             </div>

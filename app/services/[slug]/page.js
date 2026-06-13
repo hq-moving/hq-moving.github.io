@@ -3,9 +3,10 @@ import ServicePageLayout from '@/components/ServicePageLayout';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata, buildServiceStructuredData } from '@/lib/seo';
 import { getServiceBySlug, services } from '@/lib/services';
+import { getServiceSlugs } from '@/lib/routes';
 
 export function generateStaticParams() {
-  return services.map((service) => ({ slug: service.slug }));
+  return getServiceSlugs().map((slug) => ({ slug }));
 }
 
 export function generateMetadata({ params }) {

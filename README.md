@@ -34,3 +34,5 @@ npm run deploy-s3
 ```
 
 Static files export to `out/` and sync to S3.
+
+After `next build`, a postbuild step copies each `*.html` page to an extensionless file (e.g. `contact.html` → `contact`) so clean URLs like `/contact` work on S3/CloudFront without `.html` in the path.

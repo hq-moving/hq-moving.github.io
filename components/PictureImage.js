@@ -7,6 +7,7 @@ export default function PictureImage({
   height,
   className = '',
   priority = false,
+  sizes,
   ...rest
 }) {
   const imgProps = {
@@ -15,6 +16,7 @@ export default function PictureImage({
     width,
     height,
     className,
+    sizes,
     loading: priority ? 'eager' : 'lazy',
     decoding: 'async',
     fetchPriority: priority ? 'high' : undefined,

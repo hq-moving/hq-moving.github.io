@@ -28,7 +28,7 @@ export default function NavBar() {
               className="h-10 sm:h-12 w-auto object-contain"
               priority
             />
-            <span className="font-extrabold text-base sm:text-xl text-blue-900 leading-tight text-left uppercase">
+            <span className="font-extrabold text-base sm:text-xl text-brand leading-tight text-left uppercase">
               Headquarters Moving
             </span>
           </Link>
@@ -36,7 +36,7 @@ export default function NavBar() {
         <div className="group flex flex-col items-center">
           <button
             type="button"
-            className="p-8 rounded-lg lg:hidden text-blue-900"
+            className="p-8 rounded-lg lg:hidden text-brand"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle navigation menu"
           >

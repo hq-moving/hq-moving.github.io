@@ -1,36 +1,38 @@
 import Link from 'next/link';
 import PictureImage from '@/components/PictureImage';
+import PageContainer from '@/components/PageContainer';
 
 export default function Intro() {
   return (
-    <div className="m-auto max-w-6xl p-2 md:p-12 h-5/6" id="about">
-      <div className="flex flex-col-reverse lg:flex-row py-8 justify-between lg:text-left" data-aos="fade-up">
-        <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center">
+    <PageContainer className="py-8 lg:py-12" id="about">
+      <div className="flex flex-col-reverse lg:flex-row lg:items-center gap-8 xl:gap-14 py-4 text-center lg:text-left" data-aos="fade-up">
+        <div className="lg:w-1/2 flex justify-center items-center">
           <PictureImage
             src="/images/commercialmoving1.jpg"
             alt="Headquarters Moving commercial relocation service"
-            width={800}
-            height={600}
-            className="rounded-t float-right w-full h-auto"
+            width={1200}
+            height={900}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
           />
         </div>
-        <div className="flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8" data-aos="zoom-in" data-aos-delay="500">
-          <h2 className="text-3xl text-blue-900 font-bold">
+        <div className="lg:w-1/2 flex flex-col justify-center px-0 lg:px-4" data-aos="zoom-in" data-aos-delay="500">
+          <h2 className="text-3xl xl:text-4xl text-brand font-bold leading-tight">
             Florida&apos;s trusted partner for office furniture installation and commercial moving.
           </h2>
-          <p className="my-3 text-xl text-gray-600 font-semibold">
+          <p className="my-3 text-lg xl:text-xl text-gray-600 font-semibold">
             We specialize in office furniture installation — cubicle systems, desk assembly, workspace reconfiguration,
             and full commercial relocations — tailored to your business needs.
           </p>
-          <p className="my-3 text-xl text-gray-600 font-semibold">
+          <p className="my-3 text-lg xl:text-xl text-gray-600 font-semibold">
             With skilled installers, careful planning, and responsive communication, we minimize downtime and deliver
             workspaces that are ready for your team from day one.
           </p>
-          <Link href="/contact" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-2 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0">
+          <Link href="/contact" className="text-white bg-brand hover:bg-brand-dark inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 my-4 text-lg shadow-xl rounded-2xl">
             Contact us →
           </Link>
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 }
