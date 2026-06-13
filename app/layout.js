@@ -1,5 +1,6 @@
 import './globals.css';
 import AosInit from '@/components/AosInit';
+import ThemeScript from '@/components/ThemeScript';
 import { buildMetadata } from '@/lib/seo';
 import { SITE_URL } from '@/lib/site';
 
@@ -17,7 +18,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
       <body>
         <AosInit />
         {children}

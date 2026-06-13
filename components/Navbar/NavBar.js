@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import PictureImage from '@/components/PictureImage';
 import NavLinks from '@/components/Navbar/NavLinks';
+import ThemeToggle from '@/components/ThemeToggle';
 
 export default function NavBar() {
   const [top, setTop] = useState(true);
@@ -15,8 +16,12 @@ export default function NavBar() {
     return () => window.removeEventListener('scroll', scrollHandler);
   }, []);
 
+  const navSurface = !top
+    ? 'bg-white dark:bg-gray-900 shadow-lg'
+    : 'bg-white/80 dark:bg-gray-950/80 backdrop-blur-sm';
+
   return (
-    <nav className={`fixed top-0 w-full z-30 transition duration-300 ease-in-out mb-16 ${!top ? 'bg-white shadow-lg' : ''}`}>
+    <nav className={`fixed top-0 w-full z-30 transition duration-300 ease-in-out mb-16 ${navSurface}`}>
       <div className="flex flex-row justify-between items-center py-2">
         <div className="flex flex-row md:px-12 md:mx-12 items-center font-semibold">
           <Link href="/" className="inline-flex items-center gap-2 sm:gap-3 py-1">
@@ -33,10 +38,11 @@ export default function NavBar() {
             </span>
           </Link>
         </div>
-        <div className="group flex flex-col items-center">
+        <div className="flex items-center">
+          <ThemeToggle />
           <button
             type="button"
-            className="p-8 rounded-lg lg:hidden text-brand"
+            className="p-4 lg:p-8 rounded-lg lg:hidden text-brand"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle navigation menu"
           >
@@ -48,14 +54,14 @@ export default function NavBar() {
               )}
             </svg>
           </button>
-          <div className="hidden space-x-6 lg:inline-block p-5">
+          <div className="hidden lg:inline-block p-5">
             <NavLinks />
           </div>
-          <div className={`fixed transition-transform duration-300 ease-in-out flex justify-center left-0 w-full h-auto rounded-md p-24 bg-white lg:hidden shadow-xl top-14 ${isOpen ? 'block' : 'hidden'}`}>
-            <div className="flex flex-col space-y-6">
-              <NavLinks />
-            </div>
-          </div>
+        </div>
+      </div>
+      <div className={`fixed transition-transform duration-300 ease-in-out flex justify-center left-0 w-full h-auto rounded-md p-24 surface-card lg:hidden shadow-xl top-14 ${isOpen ? 'block' : 'hidden'}`}>
+        <div className="flex flex-col space-y-6">
+          <NavLinks />
         </div>
       </div>
     </nav>

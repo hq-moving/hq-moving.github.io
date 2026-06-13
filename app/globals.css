@@ -4,9 +4,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-body {
-  margin: 0;
-  font-family: 'Lato', sans-serif;
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+  }
 }
 
 .hero {
@@ -14,13 +25,80 @@ body {
   background-size: cover;
 }
 
+.dark .hero {
+  background-color: #030712;
+  background-blend-mode: multiply;
+}
+
 .footer {
   background: url(/images/footer.svg) top center no-repeat;
   background-size: cover;
+}
+
+.dark .footer {
+  background-color: #111827;
+  background-blend-mode: multiply;
 }
 
 .cta {
   background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)),
     url(https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80)
       fixed center center;
+}
+
+@layer components {
+  .surface-card {
+    @apply bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800;
+  }
+
+  .surface-muted {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+
+  .text-body {
+    @apply text-gray-600 dark:text-gray-300;
+  }
+
+  .text-subtle {
+    @apply text-gray-500 dark:text-gray-400;
+  }
+
+  .input-field {
+    @apply w-full bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-transparent dark:border-gray-700 p-3 rounded-lg;
+  }
+}
+
+@layer utilities {
+  /* Dark mode: small/medium brand text → accent for contrast on dark backgrounds */
+  .dark .text-brand {
+    color: #29abe2;
+  }
+
+  /* Keep large headings on brand blue in dark mode */
+  .dark :is(h1, h2).text-brand,
+  .dark .text-2xl.text-brand,
+  .dark .text-3xl.text-brand,
+  .dark .text-4xl.text-brand,
+  .dark .text-5xl.text-brand,
+  .dark .text-6xl.text-brand,
+  .dark .text-\[3\.25rem\].text-brand {
+    color: #003087;
+  }
+
+  /* Preserve explicit white text on brand-tinted controls */
+  .dark .text-brand.text-white {
+    color: #ffffff;
+  }
+
+  .dark .hover\:text-brand:hover {
+    color: #29abe2;
+  }
+
+  .dark :is(h1, h2).hover\:text-brand:hover,
+  .dark .text-2xl.hover\:text-brand:hover,
+  .dark .text-3xl.hover\:text-brand:hover,
+  .dark .text-4xl.hover\:text-brand:hover,
+  .dark .text-5xl.hover\:text-brand:hover {
+    color: #003087;
+  }
 }

@@ -19,10 +19,10 @@ export default function Hero() {
             >
               (772) 207-3720
             </a>
-            <p className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-5">
+            <p className="text-sm font-semibold uppercase tracking-wide text-subtle mb-5">
               Call or text for a free estimate
             </p>
-            <p className="text-lg xl:text-xl font-semibold tracking-tight mb-5 text-gray-500 max-w-2xl lg:max-w-none">
+            <p className="text-lg xl:text-xl font-semibold tracking-tight mb-5 text-subtle max-w-2xl lg:max-w-none">
               Headquarters Moving LLC is your trusted partner for office furniture installation, cubicle setup,
               workspace reconfiguration, and interstate moving in Florida — plus relocations and commercial furniture
               installation projects nationwide.
@@ -31,7 +31,7 @@ export default function Hero() {
               <Link href="/contact" className="text-white bg-brand hover:bg-brand-dark inline-flex items-center justify-center px-6 py-3 text-lg shadow-xl rounded-2xl">
                 Free Estimate →
               </Link>
-              <Link href="/services/office-furniture-installation" className="inline-flex items-center justify-center px-6 py-3 text-lg text-brand bg-white border-2 border-accent hover:bg-accent-light shadow-xl rounded-2xl">
+              <Link href="/services/office-furniture-installation" className="inline-flex items-center justify-center px-6 py-3 text-lg text-brand dark:text-white bg-white dark:bg-gray-900 border-2 border-accent hover:bg-accent-light dark:hover:bg-gray-800 shadow-xl rounded-2xl">
                 Office Furniture Services
               </Link>
             </div>

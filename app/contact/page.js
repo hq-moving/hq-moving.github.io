@@ -18,7 +18,7 @@ export default function ContactPage() {
     <>
       <JsonLd data={localBusinessSchema()} />
       <NavBar />
-      <main id="contact" className="pt-24 pb-12 bg-white">
+      <main id="contact" className="pt-24 pb-12 bg-white dark:bg-gray-950">
         <PageContainer data-aos="zoom-in">
           <h1 className="text-3xl md:text-5xl font-bold text-brand mb-8 text-center">Contact Us</h1>
           <div className="mx-auto max-w-3xl 2xl:max-w-4xl space-y-8">

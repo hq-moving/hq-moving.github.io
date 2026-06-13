@@ -43,19 +43,19 @@ export default function ServiceAreasPage() {
     <>
       <JsonLd data={localBusinessSchema()} />
       <NavBar />
-      <main className="pt-24 pb-12">
+      <main className="pt-24 pb-12 bg-white dark:bg-gray-950">
         <div className="max-w-6xl mx-auto px-4 md:px-12">
           <h1 className="text-3xl md:text-5xl font-bold text-brand text-center mb-4">Areas We Serve</h1>
-          <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-body text-center max-w-3xl mx-auto mb-12">
             Based in Port Saint Lucie, we provide office furniture installation throughout the Treasure Coast and
             Florida, plus interstate moving and installation projects to and from other states.
           </p>
 
-          <section className="mb-12 bg-brand-light rounded-2xl p-8 border border-brand-light">
+          <section className="mb-12 surface-muted rounded-2xl p-8 border border-gray-100 dark:border-gray-800">
             <h2 className="text-2xl font-bold text-brand mb-4">Services Available in Every Area</h2>
             <ul className="grid sm:grid-cols-2 gap-3">
               {areaServices.map((item) => (
-                <li key={item} className="text-gray-700 flex items-center gap-2">
+                <li key={item} className="text-gray-700 dark:text-gray-300 flex items-center gap-2">
                   <span className="text-brand font-bold">✓</span> {item}
                 </li>
               ))}
@@ -70,11 +70,11 @@ export default function ServiceAreasPage() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {serviceAreas.map((area) => (
-              <div key={area.region} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <div key={area.region} className="surface-card rounded-xl shadow-lg p-6">
                 <h2 className="text-xl font-bold text-brand mb-4">{area.region}</h2>
                 <ul className="space-y-2">
                   {area.cities.map((city) => (
-                    <li key={city} className="text-gray-600 flex items-center gap-2">
+                    <li key={city} className="text-body flex items-center gap-2">
                       <span className="w-2 h-2 bg-brand rounded-full flex-shrink-0" /> {city}
                     </li>
                   ))}

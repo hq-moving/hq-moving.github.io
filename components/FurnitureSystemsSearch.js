@@ -24,7 +24,7 @@ export default function FurnitureSystemsSearch() {
       <h2 id="systems-search-heading" className="text-2xl font-bold text-brand mb-3">
         Search Manufacturers &amp; Systems
       </h2>
-      <p className="text-gray-600 mb-4">
+      <p className="text-body mb-4">
         Facility managers and project coordinators often search by exact furniture system name. Use the
         search below to confirm we work with your manufacturer or panel system.
       </p>
@@ -37,25 +37,25 @@ export default function FurnitureSystemsSearch() {
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Search Herman Miller AO2, Steelcase Answer, Haworth Premise..."
-        className="w-full max-w-xl rounded-xl border border-gray-300 px-4 py-3 text-gray-800 shadow-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent-light"
+        className="input-field max-w-xl shadow-sm focus:border-accent focus:ring-2 focus:ring-accent-light"
       />
-      <p className="mt-2 text-sm text-gray-500">
+      <p className="mt-2 text-sm text-subtle">
         Showing {filtered.length} of {allSystems.length} manufacturers and systems
       </p>
       <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-3 max-h-[32rem] overflow-y-auto pr-1">
         {filtered.map((item) => (
           <li
             key={`${item.manufacturer}-${item.name}`}
-            className="bg-white rounded-lg border border-gray-100 px-4 py-3 shadow-sm"
+            className="surface-card rounded-lg border border-gray-100 dark:border-gray-800 px-4 py-3 shadow-sm"
           >
             <p className="font-semibold text-brand">{item.name}</p>
-            <p className="text-sm text-gray-600">{item.manufacturer}</p>
-            <p className="text-xs text-gray-400 mt-1">{item.category}</p>
+            <p className="text-sm text-body">{item.manufacturer}</p>
+            <p className="text-xs text-subtle mt-1">{item.category}</p>
           </li>
         ))}
       </ul>
       {filtered.length === 0 && (
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 text-body">
           No exact match found.{' '}
           <a href="tel:17722073720" className="text-brand font-semibold hover:underline">
             Call (772) 207-3720

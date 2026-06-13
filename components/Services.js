@@ -5,7 +5,7 @@ import { homepageServices } from '@/lib/services';
 
 export default function Services() {
   return (
-    <div id="services" className="bg-gray-100 py-12 xl:py-16">
+    <div id="services" className="surface-muted py-12 xl:py-16">
       <section data-aos="zoom-in-down">
         <PageContainer>
           <div className="my-4 py-4">
@@ -23,7 +23,7 @@ export default function Services() {
                 <Link
                   key={service.slug}
                   href={`/services/${service.slug}`}
-                  className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group block"
+                  className="surface-card transition-all ease-in-out duration-400 overflow-hidden text-gray-700 dark:text-gray-200 hover:bg-gray-500 dark:hover:bg-brand hover:text-white rounded-lg shadow-2xl p-3 group block"
                 >
                   <PictureImage
                     src={service.image}

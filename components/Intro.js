@@ -20,11 +20,11 @@ export default function Intro() {
           <h2 className="text-3xl xl:text-4xl text-brand font-bold leading-tight">
             Florida&apos;s trusted partner for office furniture installation and commercial moving.
           </h2>
-          <p className="my-3 text-lg xl:text-xl text-gray-600 font-semibold">
+          <p className="my-3 text-lg xl:text-xl text-body font-semibold">
             We specialize in office furniture installation — cubicle systems, desk assembly, workspace reconfiguration,
             and full commercial relocations — tailored to your business needs.
           </p>
-          <p className="my-3 text-lg xl:text-xl text-gray-600 font-semibold">
+          <p className="my-3 text-lg xl:text-xl text-body font-semibold">
             With skilled installers, careful planning, and responsive communication, we minimize downtime and deliver
             workspaces that are ready for your team from day one.
           </p>

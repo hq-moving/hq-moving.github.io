@@ -18,15 +18,15 @@ export default function ServicesPage() {
     <>
       <JsonLd data={localBusinessSchema()} />
       <NavBar />
-      <main className="pt-24 pb-12">
+      <main className="pt-24 pb-12 bg-white dark:bg-gray-950">
         <div className="max-w-6xl mx-auto px-4 md:px-12">
           <h1 className="text-3xl md:text-5xl font-bold text-brand text-center mb-4">Our Services</h1>
-          <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-body text-center max-w-3xl mx-auto mb-12">
             Professional office furniture installation, interstate installation and moving, and full-service relocation across Florida and nationwide.
           </p>
-          <section className="mb-12 bg-brand-light rounded-2xl p-8 border border-brand-light">
+          <section className="mb-12 bg-brand-light dark:bg-gray-900 rounded-2xl p-8 border border-brand-light dark:border-gray-700">
             <h2 className="text-2xl font-bold text-brand mb-3">Office Furniture Systems We Install &amp; Relocate</h2>
-            <p className="text-gray-700 mb-4 max-w-3xl">
+            <p className="text-gray-700 dark:text-gray-300 mb-4 max-w-3xl">
               Herman Miller AO2, Steelcase 9000, Haworth Premise, Knoll Dividends, Teknion Leverage, HON Initiate,
               and dozens of other legacy cubicle systems — searchable by manufacturer and system name.
             </p>
@@ -42,11 +42,11 @@ export default function ServicesPage() {
             <h2 className="text-2xl font-bold text-brand mb-6 uppercase">Office Furniture Installation</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {officeServices.map((service) => (
-                <Link key={service.slug} href={`/services/${service.slug}`} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl group">
+                <Link key={service.slug} href={`/services/${service.slug}`} className="surface-card rounded-xl shadow-lg overflow-hidden hover:shadow-2xl group">
                   <PictureImage src={service.image} alt={service.title} width={400} height={192} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="p-5">
                     <h3 className="font-bold text-xl text-brand mb-2">{service.title}</h3>
-                    <p className="text-gray-600 text-sm">{service.subheadline}</p>
+                    <p className="text-body text-sm">{service.subheadline}</p>
                   </div>
                 </Link>
               ))}
@@ -56,11 +56,11 @@ export default function ServicesPage() {
             <h2 className="text-2xl font-bold text-brand mb-6 uppercase">Moving &amp; Interstate Services</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {movingServices.map((service) => (
-                <Link key={service.slug} href={`/services/${service.slug}`} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl group">
+                <Link key={service.slug} href={`/services/${service.slug}`} className="surface-card rounded-xl shadow-lg overflow-hidden hover:shadow-2xl group">
                   <PictureImage src={service.image} alt={service.title} width={400} height={192} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="p-5">
                     <h3 className="font-bold text-xl text-brand mb-2">{service.title}</h3>
-                    <p className="text-gray-600 text-sm">{service.subheadline}</p>
+                    <p className="text-body text-sm">{service.subheadline}</p>
                   </div>
                 </Link>
               ))}

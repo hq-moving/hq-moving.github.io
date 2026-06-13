@@ -12,10 +12,10 @@ const footerServiceSlugs = [
 export default function Footer() {
   return (
     <footer>
-      <div className="footer max-w-full mx-auto px-4 sm:px-6 bg-gray-100 border-t border-b py-30">
-        <div className="grid sm:grid-cols-12 gap-5 py-8 md:py-12 border-t border-gray-200 lg:ml-11">
+      <div className="footer max-w-full mx-auto px-4 sm:px-6 surface-muted border-t border-b border-gray-200 dark:border-gray-800 py-30">
+        <div className="grid sm:grid-cols-12 gap-5 py-8 md:py-12 border-t border-gray-200 dark:border-gray-800 lg:ml-11">
           <div className="col-span-12 lg:col-span-4">
-            <div className="box-border border-b-4 border-accent p-8 bg-gray-200 text-gray-600 text-center rounded-lg xl:w-80 mx-auto">
+            <div className="box-border border-b-4 border-accent p-8 bg-gray-200 dark:bg-gray-800 text-body text-center rounded-lg xl:w-80 mx-auto">
               <Link href="/" className="inline-block mb-4">
                 <PictureImage
                   src="/images/hqtranslarge.png"
@@ -39,14 +39,14 @@ export default function Footer() {
                 const service = getServiceBySlug(slug);
                 return (
                   <li key={slug}>
-                    <Link href={`/services/${slug}`} className="text-brand hover:text-gray-900">
+                    <Link href={`/services/${slug}`} className="text-brand hover:text-gray-900 dark:hover:text-white">
                       {service.shortTitle}
                     </Link>
                   </li>
                 );
               })}
               <li>
-                <Link href="/services" className="text-brand hover:text-gray-900 font-semibold">All Services</Link>
+                <Link href="/services" className="text-brand hover:text-gray-900 dark:hover:text-white font-semibold">All Services</Link>
               </li>
             </ul>
           </div>
@@ -58,7 +58,7 @@ export default function Footer() {
                   href="https://g.page/r/CVPb-gl2uH2MEAI/review"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-brand hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
+                  className="text-brand hover:text-gray-900 dark:hover:text-white hover:tracking-wider transition duration-250 ease-in-out"
                 >
                   Leave a Google Review
                 </a>
@@ -68,7 +68,7 @@ export default function Footer() {
                   href="https://www.angi.com/write-review/26643364"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-brand hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
+                  className="text-brand hover:text-gray-900 dark:hover:text-white hover:tracking-wider transition duration-250 ease-in-out"
                 >
                   Leave an Angi Review
                 </a>
@@ -78,7 +78,7 @@ export default function Footer() {
                   href="https://www.homeadvisor.com/review/118783338?hired=unknown"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-brand hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
+                  className="text-brand hover:text-gray-900 dark:hover:text-white hover:tracking-wider transition duration-250 ease-in-out"
                 >
                   Leave a HomeAdvisor Review
                 </a>
@@ -88,16 +88,16 @@ export default function Footer() {
           <div className="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 mx-auto">
             <h6 className="text-brand text-xl font-bold mb-4">LINKS</h6>
             <ul className="text-md space-y-2">
-              <li><Link href="/about" className="text-brand hover:text-gray-900">About</Link></li>
-              <li><Link href="/services" className="text-brand hover:text-gray-900">Services</Link></li>
-              <li><Link href="/office-furniture-systems" className="text-brand hover:text-gray-900">Furniture Systems</Link></li>
-              <li><Link href="/service-areas" className="text-brand hover:text-gray-900">Service Areas</Link></li>
-              <li><Link href="/contact" className="text-brand hover:text-gray-900">Contact</Link></li>
+              <li><Link href="/about" className="text-brand hover:text-gray-900 dark:hover:text-white">About</Link></li>
+              <li><Link href="/services" className="text-brand hover:text-gray-900 dark:hover:text-white">Services</Link></li>
+              <li><Link href="/office-furniture-systems" className="text-brand hover:text-gray-900 dark:hover:text-white">Furniture Systems</Link></li>
+              <li><Link href="/service-areas" className="text-brand hover:text-gray-900 dark:hover:text-white">Service Areas</Link></li>
+              <li><Link href="/contact" className="text-brand hover:text-gray-900 dark:hover:text-white">Contact</Link></li>
             </ul>
           </div>
         </div>
         <div className="text-center py-4">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-subtle">
             Copyright © {new Date().getFullYear()}{' '}
             <Link href="/" className="hover:text-brand">Headquarters Moving LLC</Link>. All rights reserved.
           </p>

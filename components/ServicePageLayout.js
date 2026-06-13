@@ -9,9 +9,9 @@ export default function ServicePageLayout({ service, relatedServices = [] }) {
     <>
       <NavBar />
       <main>
-        <section className="pt-24 pb-12 bg-gradient-to-b from-brand-light to-white">
+        <section className="pt-24 pb-12 bg-gradient-to-b from-brand-light to-white dark:from-gray-900 dark:to-gray-950">
           <PageContainer>
-            <nav className="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+            <nav className="text-sm text-subtle mb-6" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-brand">Home</Link>
               <span className="mx-2">/</span>
               <Link href="/services" className="hover:text-brand">Services</Link>
@@ -21,7 +21,7 @@ export default function ServicePageLayout({ service, relatedServices = [] }) {
             <div className="flex flex-col lg:flex-row gap-10 xl:gap-14 items-center">
               <div className="lg:w-1/2" data-aos="fade-right">
                 <h1 className="text-3xl md:text-5xl xl:text-[3.25rem] font-bold text-brand mb-4">{service.headline}</h1>
-                <p className="text-xl text-gray-600 font-medium mb-6">{service.subheadline}</p>
+                <p className="text-xl text-body font-medium mb-6">{service.subheadline}</p>
                 <Link href="/contact" className="text-white bg-brand hover:bg-brand-dark inline-flex items-center px-6 py-3 text-lg shadow-xl rounded-2xl">
                   Get a Free Estimate →
                 </Link>
@@ -40,15 +40,15 @@ export default function ServicePageLayout({ service, relatedServices = [] }) {
           </PageContainer>
         </section>
 
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-white dark:bg-gray-950">
           <PageContainer>
             <div className="grid lg:grid-cols-3 gap-10">
               <article className="lg:col-span-2">
                 <h2 className="text-2xl font-bold text-brand mb-4">Overview</h2>
-                <p className="text-lg text-gray-600 leading-relaxed mb-8">{service.intro}</p>
+                <p className="text-lg text-body leading-relaxed mb-8">{service.intro}</p>
                 {service.slug === 'office-furniture-installation' && (
-                  <div className="mb-8 rounded-xl border border-brand-light bg-brand-light p-5">
-                    <p className="text-gray-700">
+                  <div className="mb-8 rounded-xl border border-brand-light dark:border-gray-700 bg-brand-light dark:bg-gray-900 p-5">
+                    <p className="text-body">
                       We install, move, and reconfigure Herman Miller, Steelcase, Haworth, Knoll, Teknion, HON,
                       AIS, and other legacy panel systems.{' '}
                       <Link href="/office-furniture-systems" className="text-brand font-semibold hover:underline">
@@ -60,9 +60,9 @@ export default function ServicePageLayout({ service, relatedServices = [] }) {
                 <h2 className="text-2xl font-bold text-brand mb-4">What We Offer</h2>
                 <div className="grid sm:grid-cols-2 gap-6 mb-10">
                   {service.features.map((feature) => (
-                    <div key={feature.title} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                    <div key={feature.title} className="surface-card bg-gray-50 dark:bg-gray-900 rounded-xl p-5">
                       <h3 className="font-bold text-brand mb-2">{feature.title}</h3>
-                      <p className="text-gray-600">{feature.description}</p>
+                      <p className="text-body">{feature.description}</p>
                     </div>
                   ))}
                 </div>
@@ -71,12 +71,12 @@ export default function ServicePageLayout({ service, relatedServices = [] }) {
                     <h2 className="text-2xl font-bold text-brand mb-4">Frequently Asked Questions</h2>
                     <div className="space-y-4 mb-8">
                       {service.faqs.map((faq) => (
-                        <details key={faq.question} className="bg-gray-50 rounded-xl p-5 border border-gray-100 group">
+                        <details key={faq.question} className="surface-card bg-gray-50 dark:bg-gray-900 rounded-xl p-5 group">
                           <summary className="font-semibold text-brand cursor-pointer list-none flex justify-between items-center">
                             {faq.question}
                             <span className="text-gray-400 group-open:rotate-45 transition-transform text-xl">+</span>
                           </summary>
-                          <p className="mt-3 text-gray-600">{faq.answer}</p>
+                          <p className="mt-3 text-body">{faq.answer}</p>
                         </details>
                       ))}
                     </div>
@@ -93,7 +93,7 @@ export default function ServicePageLayout({ service, relatedServices = [] }) {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6 pt-6 border-t border-blue-700">
+                  <div className="mt-6 pt-6 border-t border-brand-dark">
                     <p className="font-semibold mb-1">Call or Text</p>
                     <a href="tel:17722073720" className="text-2xl font-bold hover:underline">(772) 207-3720</a>
                   </div>
@@ -104,16 +104,16 @@ export default function ServicePageLayout({ service, relatedServices = [] }) {
         </section>
 
         {relatedServices.length > 0 && (
-          <section className="py-12 bg-gray-100">
+          <section className="py-12 surface-muted">
             <PageContainer>
               <h2 className="text-2xl font-bold text-brand text-center mb-8">Related Services</h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {relatedServices.map((related) => (
-                  <Link key={related.slug} href={`/services/${related.slug}`} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl group">
+                  <Link key={related.slug} href={`/services/${related.slug}`} className="surface-card rounded-xl shadow-lg overflow-hidden hover:shadow-2xl group">
                     <PictureImage src={related.image} alt={related.title} width={600} height={360} sizes="(min-width: 1024px) 33vw, 100vw" className="w-full h-40 xl:h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="p-4">
                       <h3 className="font-bold text-brand">{related.shortTitle}</h3>
-                      <p className="text-sm text-gray-500 mt-1 line-clamp-2">{related.subheadline}</p>
+                      <p className="text-sm text-subtle mt-1 line-clamp-2">{related.subheadline}</p>
                     </div>
                   </Link>
                 ))}
