@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import PictureImage from '@/components/PictureImage';
 
 export default function Intro() {
   return (
     <div className="m-auto max-w-6xl p-2 md:p-12 h-5/6" id="about">
       <div className="flex flex-col-reverse lg:flex-row py-8 justify-between lg:text-left" data-aos="fade-up">
         <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center">
-          <Image
-            src="/images/wrap.jpg"
-            alt="Headquarters Moving furniture wrapping service"
+          <PictureImage
+            src="/images/commercialmoving1.jpg"
+            alt="Headquarters Moving commercial relocation service"
             width={800}
             height={600}
             className="rounded-t float-right w-full h-auto"

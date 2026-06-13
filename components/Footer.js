@@ -1,10 +1,10 @@
 import Link from 'next/link';
+import PictureImage from '@/components/PictureImage';
 import { getServiceBySlug } from '@/lib/services';
-
 const footerServiceSlugs = [
   'office-furniture-installation',
   'cubicle-installation',
-  'intrastate-installation-moving',
+  'interstate-installation-moving',
   'commercial-moving',
   'residential-moving',
 ];
@@ -16,9 +16,16 @@ export default function Footer() {
         <div className="grid sm:grid-cols-12 gap-5 py-8 md:py-12 border-t border-gray-200 lg:ml-11">
           <div className="col-span-12 lg:col-span-4">
             <div className="box-border border-b-4 border-blue-900 p-8 bg-gray-200 text-gray-600 text-center rounded-lg xl:w-80 mx-auto">
-              <h3 className="font-bold text-4xl mb-4">HEADQUARTERS MOVING</h3>
-              <a href="tel:17722073720" className="block font-medium">(772) 207-3720</a>
-              <a href="mailto:headquartersmovers@gmail.com" className="block font-medium mt-1">HeadquartersMovers@gmail.com</a>
+              <Link href="/" className="inline-block mb-4">
+                <PictureImage
+                  src="/images/hqtranslarge.png"
+                  alt="Headquarters Moving LLC"
+                  width={280}
+                  height={120}
+                  className="mx-auto w-full max-w-[220px] h-auto object-contain"
+                />
+              </Link>
+              <a href="tel:17722073720" className="block font-medium">(772) 207-3720</a>              <a href="mailto:headquartersmovers@gmail.com" className="block font-medium mt-1">HeadquartersMovers@gmail.com</a>
               <p className="mt-2">Serving the Treasure Coast and all of Florida</p>
             </div>
           </div>

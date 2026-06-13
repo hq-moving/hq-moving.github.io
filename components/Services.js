@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import PictureImage from '@/components/PictureImage';
 import { homepageServices } from '@/lib/services';
 
 export default function Services() {
@@ -12,7 +12,7 @@ export default function Services() {
             <div className="w-24 border-b-4 border-blue-900" />
           </div>
           <p className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-blue-900">
-            Professional office furniture installation, intrastate moving, and installation services across Florida.
+            Professional office furniture installation, interstate moving, and installation services across Florida and beyond.
           </p>
         </div>
         <div className="px-12" data-aos="fade-down" data-aos-delay="600">
@@ -23,7 +23,7 @@ export default function Services() {
                 href={`/services/${service.slug}`}
                 className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group block"
               >
-                <Image
+                <PictureImage
                   src={service.image}
                   alt={service.title}
                   width={400}

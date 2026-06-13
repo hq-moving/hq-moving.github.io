@@ -5,12 +5,12 @@ import JsonLd from '@/components/JsonLd';
 import { buildMetadata, localBusinessSchema } from '@/lib/seo';
 
 export const metadata = buildMetadata({
-  title: 'Service Areas - Florida Office Furniture Installation & Intrastate Moving',
+  title: 'Service Areas - Florida Office Furniture Installation & Interstate Moving',
   description:
-    'Headquarters Moving LLC serves the Treasure Coast and all of Florida for office furniture installation, intrastate installation, and intrastate moving.',
+    'Headquarters Moving LLC serves the Treasure Coast, all of Florida, and interstate routes for office furniture installation, relocation, and moving to and from other states.',
   path: '/service-areas',
   keywords:
-    'intrastate moving Florida, intrastate installation Florida, office furniture installation Port Saint Lucie, movers Treasure Coast',
+    'interstate moving Florida, interstate installation, office furniture installation Port Saint Lucie, movers Treasure Coast, Florida to out of state movers',
 });
 
 const serviceAreas = [
@@ -19,13 +19,13 @@ const serviceAreas = [
   { region: 'Central Florida', cities: ['Orlando', 'Melbourne', 'Lakeland', 'Daytona Beach'] },
   { region: 'South Florida', cities: ['Miami', 'Fort Lauderdale', 'Hollywood', 'Pompano Beach'] },
   {
-    region: 'Statewide Florida — Intrastate Services',
+    region: 'Interstate — Florida & Beyond',
     cities: [
-      'Intrastate office furniture installation',
-      'Intrastate commercial moving',
-      'Intrastate residential moving',
-      'Long-distance moves within Florida',
-      'Statewide cubicle and FF&E installation',
+      'Moves from Florida to other states',
+      'Moves from other states to Florida',
+      'Office furniture installation in other states',
+      'Interstate commercial and residential relocation',
+      'Cubicle and FF&E installation nationwide',
     ],
   },
 ];
@@ -33,7 +33,7 @@ const serviceAreas = [
 const areaServices = [
   'Office furniture installation',
   'Cubicle and workstation setup',
-  'Intrastate installation & moving',
+  'Interstate installation & moving',
   'Commercial and residential relocation',
   'Office reconfiguration and decommissioning',
 ];
@@ -47,8 +47,8 @@ export default function ServiceAreasPage() {
         <div className="max-w-6xl mx-auto px-4 md:px-12">
           <h1 className="text-3xl md:text-5xl font-bold text-blue-900 text-center mb-4">Areas We Serve</h1>
           <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-12">
-            Based in Port Saint Lucie, we provide office furniture installation, intrastate installation, and
-            intrastate moving services throughout the Treasure Coast and across all of Florida.
+            Based in Port Saint Lucie, we provide office furniture installation throughout the Treasure Coast and
+            Florida, plus interstate moving and installation projects to and from other states.
           </p>
 
           <section className="mb-12 bg-blue-50 rounded-2xl p-8 border border-blue-100">
@@ -61,10 +61,10 @@ export default function ServiceAreasPage() {
               ))}
             </ul>
             <Link
-              href="/services/intrastate-installation-moving"
+              href="/services/interstate-installation-moving"
               className="inline-block mt-6 text-blue-900 font-semibold hover:underline"
             >
-              Learn about intrastate installation &amp; moving →
+              Learn about interstate installation &amp; moving →
             </Link>
           </section>
 
@@ -84,14 +84,14 @@ export default function ServiceAreasPage() {
           </div>
 
           <section className="bg-blue-900 text-white rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">Statewide Intrastate Coverage</h2>
+            <h2 className="text-2xl font-bold mb-4">Florida &amp; Interstate Coverage</h2>
             <p className="text-lg mb-6 opacity-90">
-              We travel throughout Florida for intrastate installation and moving projects. Call (772) 207-3720 for a
-              free estimate.
+              We handle projects across Florida and travel for interstate moves and out-of-state furniture installation.
+              Call (772) 207-3720 for a free estimate.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/services/intrastate-installation-moving" className="bg-white text-blue-900 px-8 py-3 rounded-2xl font-bold inline-block">
-                Intrastate Services
+              <Link href="/services/interstate-installation-moving" className="bg-white text-blue-900 px-8 py-3 rounded-2xl font-bold inline-block">
+                Interstate Services
               </Link>
               <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-2xl font-bold inline-block hover:bg-white hover:text-blue-900">
                 Get in Touch

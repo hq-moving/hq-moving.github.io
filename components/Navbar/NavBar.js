@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import PictureImage from '@/components/PictureImage';
 import NavLinks from '@/components/Navbar/NavLinks';
 
 export default function NavBar() {
@@ -17,9 +18,19 @@ export default function NavBar() {
   return (
     <nav className={`fixed top-0 w-full z-30 transition duration-300 ease-in-out mb-16 ${!top ? 'bg-white shadow-lg' : ''}`}>
       <div className="flex flex-row justify-between items-center py-2">
-        <div className="flex flex-row justify-center md:px-12 md:mx-12 items-center text-center font-semibold">
-          <Link href="/">
-            <span className="font-extrabold text-2xl text-blue-900"> HEADQUARTERS MOVING</span>
+        <div className="flex flex-row md:px-12 md:mx-12 items-center font-semibold">
+          <Link href="/" className="inline-flex items-center gap-2 sm:gap-3 py-1">
+            <PictureImage
+              src="/images/hqtranslarge.png"
+              alt="Headquarters Moving LLC"
+              width={200}
+              height={80}
+              className="h-10 sm:h-12 w-auto object-contain"
+              priority
+            />
+            <span className="font-extrabold text-base sm:text-xl text-blue-900 leading-tight text-left uppercase">
+              Headquarters Moving
+            </span>
           </Link>
         </div>
         <div className="group flex flex-col items-center">

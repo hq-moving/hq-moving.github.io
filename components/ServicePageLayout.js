@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import PictureImage from '@/components/PictureImage';
 import NavBar from '@/components/Navbar/NavBar';
 import Footer from '@/components/Footer';
 import { services } from '@/lib/services';
@@ -27,7 +27,7 @@ export default function ServicePageLayout({ service, relatedServices = [] }) {
                 </Link>
               </div>
               <div className="lg:w-1/2" data-aos="fade-left">
-                <Image
+                <PictureImage
                   src={service.heroImage}
                   alt={`${service.title} by Headquarters Moving LLC`}
                   width={800}
@@ -109,7 +109,7 @@ export default function ServicePageLayout({ service, relatedServices = [] }) {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {relatedServices.map((related) => (
                   <Link key={related.slug} href={`/services/${related.slug}`} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl group">
-                    <Image src={related.image} alt={related.title} width={400} height={160} className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <PictureImage src={related.image} alt={related.title} width={400} height={160} className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="p-4">
                       <h3 className="font-bold text-blue-900">{related.shortTitle}</h3>
                       <p className="text-sm text-gray-500 mt-1 line-clamp-2">{related.subheadline}</p>
