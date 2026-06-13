@@ -22,8 +22,9 @@ export default function Hero() {
               Call or text for a free estimate
             </p>
             <p className="text-xl font-semibold tracking-tight mb-5 text-gray-500">
-              Headquarters Moving LLC is your trusted partner for professional office furniture installation, cubicle
-              setup, workspace reconfiguration, and commercial relocations across the Treasure Coast and all of Florida.
+              Headquarters Moving LLC is your trusted partner for office furniture installation, cubicle setup,
+              workspace reconfiguration, and interstate moving in Florida — plus relocations and commercial furniture
+              installation projects nationwide.
             </p>
             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
               <Link href="/contact" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0">

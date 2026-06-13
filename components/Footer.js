@@ -25,9 +25,12 @@ export default function Footer() {
                   className="mx-auto w-full max-w-[220px] h-auto object-contain"
                 />
               </Link>
-              <a href="tel:17722073720" className="block font-medium">(772) 207-3720</a>              <a href="mailto:headquartersmovers@gmail.com" className="block font-medium mt-1">HeadquartersMovers@gmail.com</a>
-              <p className="mt-2">Serving the Treasure Coast and all of Florida</p>
-            </div>
+              <a href="tel:17722073720" className="block font-medium">(772) 207-3720</a>
+              <a href="mailto:headquartersmovers@gmail.com" className="block font-medium mt-1">HeadquartersMovers@gmail.com</a>
+              <p className="mt-3 text-sm leading-relaxed">
+                Office furniture installation, cubicle setup, reconfiguration, and interstate moving in Florida — plus
+                relocations and commercial furniture installation projects nationwide.
+              </p>            </div>
           </div>
           <div className="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 mx-auto">
             <h6 className="text-[#013289] text-xl font-bold mb-4">SERVICES</h6>
