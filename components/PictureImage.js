@@ -26,7 +26,7 @@ export default function PictureImage({
   }
 
   return (
-    <picture className="contents">
+    <picture className="block max-w-full">
       <source srcSet={getWebpSrc(src)} type="image/webp" />
       <img {...imgProps} />
     </picture>
