@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "next dev",
     "generate-webp": "node scripts/generate-webp.cjs",
-    "prebuild": "npm run generate-webp",
+    "generate-favicon": "node scripts/generate-favicon.cjs",
+    "prebuild": "npm run generate-webp && npm run generate-favicon",
     "build": "next build",
     "postbuild": "node scripts/postbuild-s3.cjs",
     "start": "next start",
