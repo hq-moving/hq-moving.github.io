@@ -1,27 +1,36 @@
-# React JS Startup and small business website template
+# Headquarters Moving — Next.js Website
 
-### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Office furniture installation and moving services site for [headquartersmoving.com](https://www.headquartersmoving.com).
 
-# Screenshot
+## Stack
 
-![mld edit](https://user-images.githubusercontent.com/43953425/212030864-cf3aa272-e070-4e1b-8e25-f488ca56873e.png)
+- **Next.js 14** (App Router, static export for S3/CloudFront)
+- **Tailwind CSS**
+- **EmailJS** contact form
 
+## Requirements
 
+- **Node.js 18.17+** (see `.nvmrc`)
 
-The Live demo is available [Here](https://mld-prototype.netlify.app)
+## Setup
 
-## Description
+```bash
+npm install
+cp .env.local.example .env.local
+```
 
-This is a ReactJS based startup and small business website template. 
-It was designed using TailwindCSS and React. 
-The Contact form was made functional using EmailJS, to learn how to use EmailJS, you can check out the official documentation [here](https://www.emailjs.com/docs/) or follow this short tutorial [here](https://senuravihanjayadeva.medium.com/send-emails-using-react-through-emailjs-a9d4b21193a7) 
+Add EmailJS keys as `NEXT_PUBLIC_EMAILJS_*` (renamed from `REACT_APP_*`).
 
-## How to use it
+## Development
 
-To use this template:
-1. Clone the repository to your local machine, 
-2. run `npm install` to install all the required dependencies and
-3. run `npm start` to view the website locally.
-Feel free to edit and make changes. 
+```bash
+npm run dev
+```
 
-You can also Fork the repo and clone to your local machine, make desired changes and enjoy.
+## Deploy to AWS
+
+```bash
+npm run deploy-s3
+```
+
+Static files export to `out/` and sync to S3.
