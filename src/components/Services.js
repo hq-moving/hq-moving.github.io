@@ -1,20 +1,7 @@
 import React from 'react';
-import mvgChImg from '../images/movingCouch.jpg';
-import ComMvgImg from '../images/comMvg.jpg'; 
-import cubeImg from '../images/cubeImg.jpg';
-import otherImg from '../images/otherImg.jpg'; 
-import boxesImg from '../images/boxes.png'; 
-import bedImg from '../images/bed.png';
-import deskImg from '../images/desk_small.png';
-import wrapImg from '../images/wrapped.png'
-import dolliesImg from '../images/Dollies.png'
-{/*
-import img from '../images/web.svg'; 
-import officeImg from '../images/officeImg.jpg'; 
-import img2 from '../images/app.svg';
-import img3 from '../images/hosting.svg';
-import img4 from '../images/consultation.svg';
-*/}
+import { Link } from 'react-router-dom';
+import { services } from '../data/services';
+
 const Services = () => {
 
     return (
@@ -26,87 +13,41 @@ const Services = () => {
                         <div className='flex justify-center'>
                             <div className='w-24 border-b-4 border-blue-900'></div>
                         </div>
-                        <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-blue-900">We are deeply committed to the success of our clients relocation and service projects.</h2>
+                        <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-blue-900">
+                            Professional office furniture installation and moving services across Florida.
+                        </h2>
                     </div>
 
                     <div className="px-12" data-aos="fade-down" data-aos-delay="600">
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                            
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                                <div className="m-2 text-justify text-sm"  display="flex" textAlign="center">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={wrapImg} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center">Residential Moving</h2>
-                                    <p className="text-md font-medium"  display="flex" textAlign="center">
-                                    Searching for professional residential movers? Headquarters Moving LLC offers a full range of residential moving services designed to simplify your move: <br /> <br />   
-                                    <b>Packing and Unpacking: </b>Safe handling of items with premium packing materials.<br /><br /> 
-                                    <b>Loading and Unloading: </b>Careful management of your belongings during transport.<br /><br /> 
-                                    <b>Transportation: </b>Reliable vehicles for secure item delivery.<br /><br /> 
-                                    <b>Storage Solutions: </b>Short-term and long-term options for flexible storage.<br /><br /> 
-                                    <b>Special Handling: </b>Expertise in moving delicate items, including TVs and glass tables.<br /><br /> 
-                                    <b>Furniture Assembly and Disassembly: </b>Comprehensive setup and breakdown services.
-                                    {/*
-                                    We specialize in delivering high-quality residential and commercial moving services for clients of all sizes, ensuring smooth transitions and exceptional care for your 
-                                    belongings. Providing reliable, efficient, and stress-free moving solutions tailored to your needs. Services include office and home relocation, internal moves, and building cleanouts. 
-                                    */}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                                <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={dolliesImg} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center">{`Commercial Moving`}</h2>
-                                    <p className="text-md font-medium">
-                                    Looking to relocate your business? We specialize in efficient commercial moving services to minimize downtime and ensure a smooth transition:<br/><br/>
-                                    <b>Space Planning: </b>Strategic layouts for optimized functionality.<br /><br />
-                                    <b>Furniture Disassembly and Assembly: </b>Seamless handling of office furniture.<br /><br />
-                                    <b>Equipment Handling: </b>Professional care for specialized business equipment.<br /><br />
-                                    <b>On-Site Coordination: </b>Dedicated project management for stress-free moves.<br /><br />
-                                    <b>Specialized Moves:</b>Custom solutions tailored to unique business needs.<br /><br />
-                                        {/*
-                                        We provide high-quality, customized residential and commercial installation services, including cubicle setup, wall mounting, and workspace optimization, designed for precision, efficiency, 
-                                        and long-lasting functionality.
-                                        */}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                                <div className="m-2 text-justify text-sm">
-                                    <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={deskImg} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center ">Office Furniture Installation</h2>
-                                    <p className="text-md font-medium">
-                                    Maximize productivity with our office furniture installation solutions:<br /><br />
-                                    <b>Assembly and Space Planning:</b> Expert setup and organization for your workspace.<br /><br />
-                                    <b>Reconfigure Services:</b> Adapt layouts to meet evolving business demands.<br /><br />
-                                    <b>Delivery and Setup:</b> Reliable delivery and installation of office furniture.<br /><br />
-                                    <b>Decommissioning:</b> Eco-friendly disposal and recycling services for outdated furniture.<br /><br />
-
-                                    {/**
-                                    expertise includes moving and setup, furniture assembly and repair, mounting and installation of various items, office reorganization, cubicle maintenance, disposal services, and specialized tasks like shelving, packing, and light handyman work. TV mounting, standing desk assembly, picture hanging, etc.
-                                    */}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                                <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={boxesImg} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center ">Other Services</h2>
-                                    <p className="text-md font-medium">
-                                    We offer a variety of add-on services to enhance your moving experience:<br /><br />
-                                    <b>Moving Supplies:</b> Access to high-quality packing materials.<br /><br />
-                                    <b>Cleaning Services:</b> Comprehensive cleaning for vacated spaces.<br /><br />
-                                    <b>Insurance Options:</b> Coverage to protect your valuables during the move.<br /><br />
-                                        {/*
-                                        Subcontracting for other moving and installation companies. <br />
-                                        Storage and Management. <br />
-                                        Recieving and delivery. <br />
-                                        Misc. handyman services.
-                                    */}
-                                    </p>
-                                </div>
-                            </div>                    
+                            {services.slice(0, 4).map((service) => (
+                                <Link
+                                    key={service.slug}
+                                    to={`/services/${service.slug}`}
+                                    className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group block"
+                                >
+                                    <div className="m-2 text-justify text-sm">
+                                        <img
+                                            alt={`${service.title} - Headquarters Moving LLC`}
+                                            className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out w-full h-40 object-cover"
+                                            src={service.image}
+                                        />
+                                        <h3 className="font-semibold my-4 text-2xl text-center">{service.title}</h3>
+                                        <p className="text-md font-medium line-clamp-4">{service.subheadline}</p>
+                                        <span className="block text-center mt-4 font-bold text-blue-900 group-hover:text-white">
+                                            Learn more →
+                                        </span>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                        <div className="text-center mt-8">
+                            <Link
+                                to="/services"
+                                className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center px-8 py-3 rounded-2xl font-semibold text-lg"
+                            >
+                                View All Services
+                            </Link>
                         </div>
                     </div>
             </section>
@@ -119,10 +60,10 @@ const Services = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" className='fill-current'><path d="M2 12h2a7.986 7.986 0 0 1 2.337-5.663 7.91 7.91 0 0 1 2.542-1.71 8.12 8.12 0 0 1 6.13-.041A2.488 2.488 0 0 0 17.5 7C18.886 7 20 5.886 20 4.5S18.886 2 17.5 2c-.689 0-1.312.276-1.763.725-2.431-.973-5.223-.958-7.635.059a9.928 9.928 0 0 0-3.18 2.139 9.92 9.92 0 0 0-2.14 3.179A10.005 10.005 0 0 0 2 12zm17.373 3.122c-.401.952-.977 1.808-1.71 2.541s-1.589 1.309-2.542 1.71a8.12 8.12 0 0 1-6.13.041A2.488 2.488 0 0 0 6.5 17C5.114 17 4 18.114 4 19.5S5.114 22 6.5 22c.689 0 1.312-.276 1.763-.725A9.965 9.965 0 0 0 12 22a9.983 9.983 0 0 0 9.217-6.102A9.992 9.992 0 0 0 22 12h-2a7.993 7.993 0 0 1-.627 3.122z"></path><path d="M12 7.462c-2.502 0-4.538 2.036-4.538 4.538S9.498 16.538 12 16.538s4.538-2.036 4.538-4.538S14.502 7.462 12 7.462zm0 7.076c-1.399 0-2.538-1.139-2.538-2.538S10.601 9.462 12 9.462s2.538 1.139 2.538 2.538-1.139 2.538-2.538 2.538z"></path></svg>
                             </div>
                             <h3 className="text-3xl  text-blue-900 
-                            font-bold">Your <span className='font-black'>Move</span></h3>
+                            font-bold">Your <span className='font-black'>Workspace</span></h3>
                             <div>
                                 <p className='my-3 text-xl text-gray-600 font-semibold'>
-                                At Headquarters Moving LLC, our mission is to provide reliable, efficient, and personalized moving solutions.
+                                From cubicle installation to full office buildouts, we help Florida businesses create productive workspaces.
                                 </p>
                             </div>
                         </div>
@@ -133,7 +74,7 @@ const Services = () => {
                             <h3 className="text-3xl  text-blue-900 font-bold">Our <span className='font-black'>Mission</span></h3>
                             <div>
                                 <p className='my-3 text-xl text-gray-600 font-semibold'>
-                                By focusing on customer satisfaction, we ensure that every relocation is smooth, seamless, and stress-free.</p>
+                                Reliable, efficient, and stress-free moving and furniture installation — every project, every time.</p>
                             </div>
                         </div>
                     </div>

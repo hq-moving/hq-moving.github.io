@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
-import {useDocTitle} from '../components/CustomHook';
-import axios from 'axios';
+import SEO, { localBusinessSchema } from '../components/SEO';
 import emailjs from 'emailjs-com';
 import Notiflix from 'notiflix';
 
 const Contact = () => {
-    useDocTitle('HQM | Contact Us')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
@@ -119,6 +117,13 @@ const Contact = () => {
     };
     return (
         <>
+            <SEO
+                title="Contact Us - Free Moving & Furniture Installation Estimate"
+                description="Contact Headquarters Moving LLC for a free estimate on office furniture installation, cubicle setup, commercial moving, and residential relocations in Florida. Call (772) 207-3720."
+                path="/contact"
+                keywords="contact Headquarters Moving, free moving estimate Florida, office furniture installation quote"
+                structuredData={localBusinessSchema()}
+            />
             <div>
                 <NavBar />
             </div>
