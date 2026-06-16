@@ -49,7 +49,8 @@ async function generateFavicons() {
   }
 
   for (const { file, size } of OUTPUTS) {
-    await buildLogoSquare(size).toFile(file);
+    const image = await buildLogoSquare(size);
+    await image.toFile(file);
     console.log(`Favicon: ${path.relative(ROOT, file)} (${size}x${size})`);
   }
 }
