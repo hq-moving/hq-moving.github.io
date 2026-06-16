@@ -10,7 +10,13 @@ try {
 }
 
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
-const SKIP_FILES = new Set(['favicon.png', 'apple-touch-icon.png']);
+const SKIP_FILES = new Set([
+  'favicon.png',
+  'favicon-16.png',
+  'favicon-32.png',
+  'apple-touch-icon.png',
+  'icon-512.png',
+]);
 
 function walk(dir) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
