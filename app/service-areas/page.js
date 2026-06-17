@@ -3,6 +3,7 @@ import NavBar from '@/components/Navbar/NavBar';
 import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata, localBusinessSchema } from '@/lib/seo';
+import { cityToLocationSlug } from '@/lib/locations';
 
 export const metadata = buildMetadata({
   title: 'Service Areas - Florida Office Furniture Installation & Interstate Moving',
@@ -61,10 +62,10 @@ export default function ServiceAreasPage() {
               ))}
             </ul>
             <Link
-              href="/services/interstate-installation-moving"
+              href="/locations/treasure-coast"
               className="inline-block mt-6 text-brand font-semibold hover:underline"
             >
-              Learn about interstate installation &amp; moving →
+              View all Treasure Coast location pages →
             </Link>
           </section>
 
@@ -73,11 +74,21 @@ export default function ServiceAreasPage() {
               <div key={area.region} className="surface-card rounded-xl shadow-lg p-6">
                 <h2 className="text-xl font-bold text-brand mb-4">{area.region}</h2>
                 <ul className="space-y-2">
-                  {area.cities.map((city) => (
-                    <li key={city} className="text-body flex items-center gap-2">
-                      <span className="w-2 h-2 bg-brand rounded-full flex-shrink-0" /> {city}
-                    </li>
-                  ))}
+                  {area.cities.map((city) => {
+                    const locationSlug = cityToLocationSlug[city];
+                    return (
+                      <li key={city} className="text-body flex items-center gap-2">
+                        <span className="w-2 h-2 bg-brand rounded-full flex-shrink-0" />
+                        {locationSlug ? (
+                          <Link href={`/locations/${locationSlug}`} className="text-brand font-semibold hover:underline">
+                            {city}
+                          </Link>
+                        ) : (
+                          city
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}
@@ -90,10 +101,10 @@ export default function ServiceAreasPage() {
               Call (772) 207-3720 for a free estimate.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/services/interstate-installation-moving" className="bg-white text-brand px-8 py-3 rounded-2xl font-bold inline-block">
+              <Link href="/services/interstate-installation-moving" className="bg-white text-brand px-8 py-3 rounded-2xl font-bold inline-block dark:bg-gray-900 dark:text-white dark:border-2 dark:border-accent">
                 Interstate Services
               </Link>
-              <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-2xl font-bold inline-block hover:bg-white hover:text-brand">
+              <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-2xl font-bold inline-block hover:bg-white hover:text-brand dark:hover:bg-gray-900 dark:hover:text-accent dark:hover:border-accent">
                 Get in Touch
               </Link>
             </div>

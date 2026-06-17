@@ -91,7 +91,10 @@ export default function Footer() {
               <li><Link href="/about" className="text-brand hover:text-gray-900 dark:hover:text-white">About</Link></li>
               <li><Link href="/services" className="text-brand hover:text-gray-900 dark:hover:text-white">Services</Link></li>
               <li><Link href="/office-furniture-systems" className="text-brand hover:text-gray-900 dark:hover:text-white">Furniture Systems</Link></li>
+              <li><Link href="/locations" className="text-brand hover:text-gray-900 dark:hover:text-white">Locations</Link></li>
               <li><Link href="/service-areas" className="text-brand hover:text-gray-900 dark:hover:text-white">Service Areas</Link></li>
+              <li><Link href="/guides" className="text-brand hover:text-gray-900 dark:hover:text-white">Guides</Link></li>
+              <li><Link href="/blog" className="text-brand hover:text-gray-900 dark:hover:text-white">Resources</Link></li>
               <li><Link href="/contact" className="text-brand hover:text-gray-900 dark:hover:text-white">Contact</Link></li>
             </ul>
           </div>

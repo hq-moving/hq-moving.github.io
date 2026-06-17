@@ -125,7 +125,7 @@ export default function ServicePageLayout({ service, relatedServices = [] }) {
           <div className="max-w-4xl mx-auto px-4 text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-xl mb-6">Contact Headquarters Moving LLC for a free estimate on {service.title.toLowerCase()}.</p>
-            <Link href="/contact" className="bg-white text-brand hover:bg-gray-100 inline-flex items-center px-8 py-3 rounded-2xl font-bold text-lg">
+            <Link href="/contact" className="bg-white text-brand hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:border-2 dark:border-accent dark:hover:bg-gray-800 inline-flex items-center px-8 py-3 rounded-2xl font-bold text-lg">
               Request a Free Estimate
             </Link>
           </div>

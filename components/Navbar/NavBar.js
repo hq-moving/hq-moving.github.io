@@ -5,6 +5,7 @@ import Link from 'next/link';
 import PictureImage from '@/components/PictureImage';
 import NavLinks from '@/components/Navbar/NavLinks';
 import ThemeToggle from '@/components/ThemeToggle';
+import SiteSearch from '@/components/SiteSearch';
 
 export default function NavBar() {
   const [top, setTop] = useState(true);
@@ -22,8 +23,8 @@ export default function NavBar() {
 
   return (
     <nav className={`fixed top-0 w-full z-30 transition duration-300 ease-in-out mb-16 ${navSurface}`}>
-      <div className="flex flex-row justify-between items-center py-2">
-        <div className="flex flex-row md:px-12 md:mx-12 items-center font-semibold">
+      <div className="flex flex-row justify-between items-center gap-3 py-2 px-4 md:px-8 lg:px-12">
+        <div className="flex flex-row items-center font-semibold shrink-0">
           <Link href="/" className="inline-flex items-center gap-2 sm:gap-3 py-1">
             <PictureImage
               src="/images/hqtranslarge.png"
@@ -38,7 +39,12 @@ export default function NavBar() {
             </span>
           </Link>
         </div>
-        <div className="flex items-center">
+
+        <div className="hidden md:flex flex-1 max-w-md lg:max-w-lg mx-2 lg:mx-6">
+          <SiteSearch />
+        </div>
+
+        <div className="flex items-center shrink-0">
           <ThemeToggle />
           <button
             type="button"
@@ -59,8 +65,9 @@ export default function NavBar() {
           </div>
         </div>
       </div>
-      <div className={`fixed transition-transform duration-300 ease-in-out flex justify-center left-0 w-full h-auto rounded-md p-24 surface-card lg:hidden shadow-xl top-14 ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="flex flex-col space-y-6">
+      <div className={`fixed transition-transform duration-300 ease-in-out flex justify-center left-0 w-full h-auto rounded-md p-8 md:p-12 surface-card lg:hidden shadow-xl top-14 ${isOpen ? 'block' : 'hidden'}`}>
+        <div className="flex flex-col space-y-6 w-full max-w-md">
+          <SiteSearch id="mobile-site-search" onNavigate={() => setIsOpen(false)} />
           <NavLinks />
         </div>
       </div>

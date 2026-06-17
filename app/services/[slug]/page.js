@@ -14,7 +14,7 @@ export function generateMetadata({ params }) {
   if (!service) return {};
 
   return buildMetadata({
-    title: service.title,
+    title: service.metaTitle || service.title,
     description: service.metaDescription,
     path: `/services/${params.slug}`,
     keywords: service.keywords,
