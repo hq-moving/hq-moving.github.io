@@ -3,7 +3,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const outDir = path.join(__dirname, '..', 'out');
-const bucket = process.env.S3_BUCKET || 's3://www.headquartersmoving.com';
+const bucket = process.env.S3_BUCKET || 's3://headquartersmoving.com';
 const manifestPath = path.join(__dirname, '.s3-directory-route-conflicts.json');
 
 if (process.env.NEXT_STATIC_EXPORT === 'false') {
