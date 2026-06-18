@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div className="hero" id="hero">
       <NavBar />
-      <PageContainer className="mt-8 lg:mt-4 py-8 lg:py-12" data-aos="zoom-in">
+      <PageContainer className="pt-24 pb-8 lg:pb-12" data-aos="zoom-in">
         <div className="flex flex-col lg:flex-row lg:items-center gap-8 xl:gap-14 py-4 text-center lg:text-left">
           <div className="lg:w-1/2 flex flex-col justify-center" data-aos="zoom-in" data-aos-delay="200">
             <h1 className="mb-4 text-3xl md:text-5xl xl:text-[3.25rem] 2xl:text-6xl font-bold text-brand leading-tight">

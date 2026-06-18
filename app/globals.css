@@ -69,36 +69,17 @@
 }
 
 @layer utilities {
-  /* Dark mode: small/medium brand text → accent for contrast on dark backgrounds */
+  /* Dark mode: never use navy brand (#003087) — light blue for brand text and headings */
   .dark .text-brand {
     color: #29abe2;
   }
 
-  /* Keep large headings on brand blue in dark mode */
-  .dark :is(h1, h2).text-brand,
-  .dark .text-2xl.text-brand,
-  .dark .text-3xl.text-brand,
-  .dark .text-4xl.text-brand,
-  .dark .text-5xl.text-brand,
-  .dark .text-6xl.text-brand,
-  .dark .text-\[3\.25rem\].text-brand {
-    color: #003087;
-  }
-
-  /* Preserve explicit white text on brand-tinted controls */
+  /* Buttons and controls that explicitly pair brand + white */
   .dark .text-brand.text-white {
     color: #ffffff;
   }
 
   .dark .hover\:text-brand:hover {
-    color: #29abe2;
-  }
-
-  .dark :is(h1, h2).hover\:text-brand:hover,
-  .dark .text-2xl.hover\:text-brand:hover,
-  .dark .text-3xl.hover\:text-brand:hover,
-  .dark .text-4xl.hover\:text-brand:hover,
-  .dark .text-5xl.hover\:text-brand:hover {
-    color: #003087;
+    color: #ffffff;
   }
 }

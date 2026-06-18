@@ -56,8 +56,11 @@ export default function ServiceAreasPage() {
             <h2 className="text-2xl font-bold text-brand mb-4">Services Available in Every Area</h2>
             <ul className="grid sm:grid-cols-2 gap-3">
               {areaServices.map((item) => (
-                <li key={item} className="text-gray-700 dark:text-gray-300 flex items-center gap-2">
-                  <span className="text-brand font-bold">✓</span> {item}
+                <li key={item} className="text-body flex items-center gap-2">
+                  <span className="text-brand font-bold" aria-hidden="true">
+                    ✓
+                  </span>
+                  {item}
                 </li>
               ))}
             </ul>
@@ -77,10 +80,13 @@ export default function ServiceAreasPage() {
                   {area.cities.map((city) => {
                     const locationSlug = cityToLocationSlug[city];
                     return (
-                      <li key={city} className="text-body flex items-center gap-2">
-                        <span className="w-2 h-2 bg-brand rounded-full flex-shrink-0" />
+                      <li key={city} className="flex items-center gap-2 text-body">
+                        <span className="w-2 h-2 bg-accent rounded-full flex-shrink-0" aria-hidden="true" />
                         {locationSlug ? (
-                          <Link href={`/locations/${locationSlug}`} className="text-brand font-semibold hover:underline">
+                          <Link
+                            href={`/locations/${locationSlug}`}
+                            className="text-body hover:text-brand hover:underline"
+                          >
                             {city}
                           </Link>
                         ) : (
@@ -95,8 +101,8 @@ export default function ServiceAreasPage() {
           </div>
 
           <section className="bg-brand text-white rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">Florida &amp; Interstate Coverage</h2>
-            <p className="text-lg mb-6 opacity-90">
+            <h2 className="text-2xl font-bold text-white mb-4">Florida &amp; Interstate Coverage</h2>
+            <p className="text-lg text-white/90 mb-6">
               We handle projects across Florida and travel for interstate moves and out-of-state furniture installation.
               Call (772) 207-3720 for a free estimate.
             </p>

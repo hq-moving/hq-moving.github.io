@@ -25,17 +25,28 @@ export default function NavBar() {
     <nav className={`fixed top-0 w-full z-30 transition duration-300 ease-in-out mb-16 ${navSurface}`}>
       <div className="flex flex-row justify-between items-center gap-3 py-2 px-4 md:px-8 lg:px-12">
         <div className="flex flex-row items-center font-semibold shrink-0">
-          <Link href="/" className="inline-flex items-center gap-2 sm:gap-3 py-1">
+          <Link href="/" className="inline-flex items-center gap-3 py-1" aria-label="Headquarters Moving home">
             <PictureImage
               src="/images/hqtranslarge.png"
-              alt="Headquarters Moving LLC"
+              alt="Headquarters Moving"
               width={200}
               height={80}
-              className="h-10 sm:h-12 w-auto object-contain"
+              className="h-10 sm:h-12 w-auto object-contain lg:hidden"
               priority
             />
-            <span className="font-extrabold text-base sm:text-xl text-brand leading-tight text-left uppercase">
-              Headquarters Moving
+            <span className="hidden lg:inline-flex items-center gap-3">
+              <PictureImage
+                src="/images/hq-truck-icon.png"
+                alt=""
+                width={130}
+                height={95}
+                className="h-10 w-auto object-contain"
+                priority
+                aria-hidden
+              />
+              <span className="font-bold text-lg text-brand leading-tight whitespace-nowrap">
+                Headquarters Moving
+              </span>
             </span>
           </Link>
         </div>
