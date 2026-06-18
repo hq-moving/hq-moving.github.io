@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import PictureImage from '@/components/PictureImage';
 import { getServiceBySlug } from '@/lib/services';
+import { GOOGLE_REVIEW_URL } from '@/lib/reviews';
 const footerServiceSlugs = [
   'office-furniture-installation',
   'cubicle-installation',
@@ -33,6 +34,19 @@ export default function Footer() {
               </p>            </div>
           </div>
           <div className="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 mx-auto">
+            <h6 className="text-brand text-xl font-bold mb-4">EXPLORE</h6>
+            <ul className="text-md space-y-2">
+              <li><Link href="/about" className="text-brand hover:text-gray-900 dark:hover:text-white">About</Link></li>
+              <li><Link href="/services" className="text-brand hover:text-gray-900 dark:hover:text-white">Services</Link></li>
+              <li><Link href="/office-furniture-systems" className="text-brand hover:text-gray-900 dark:hover:text-white">Furniture Systems</Link></li>
+              <li><Link href="/locations" className="text-brand hover:text-gray-900 dark:hover:text-white">Locations</Link></li>
+              <li><Link href="/service-areas" className="text-brand hover:text-gray-900 dark:hover:text-white">Service Areas</Link></li>
+              <li><Link href="/guides" className="text-brand hover:text-gray-900 dark:hover:text-white">Guides</Link></li>
+              <li><Link href="/blog" className="text-brand hover:text-gray-900 dark:hover:text-white">Resources</Link></li>
+              <li><Link href="/contact" className="text-brand hover:text-gray-900 dark:hover:text-white">Contact</Link></li>
+            </ul>
+          </div>
+          <div className="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 mx-auto">
             <h6 className="text-brand text-xl font-bold mb-4">SERVICES</h6>
             <ul className="text-md space-y-2">
               {footerServiceSlugs.map((slug) => {
@@ -54,8 +68,13 @@ export default function Footer() {
             <h6 className="text-brand text-xl font-bold mb-4">REVIEWS</h6>
             <ul className="text-md space-y-2">
               <li>
+                <Link href="/reviews" className="text-brand hover:text-gray-900 dark:hover:text-white">
+                  Reviews
+                </Link>
+              </li>
+              <li>
                 <a
-                  href="https://g.page/r/CVPb-gl2uH2MEAI/review"
+                  href={GOOGLE_REVIEW_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-brand hover:text-gray-900 dark:hover:text-white hover:tracking-wider transition duration-250 ease-in-out"
@@ -63,39 +82,6 @@ export default function Footer() {
                   Leave a Google Review
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://www.angi.com/write-review/26643364"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand hover:text-gray-900 dark:hover:text-white hover:tracking-wider transition duration-250 ease-in-out"
-                >
-                  Leave an Angi Review
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.homeadvisor.com/review/118783338?hired=unknown"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand hover:text-gray-900 dark:hover:text-white hover:tracking-wider transition duration-250 ease-in-out"
-                >
-                  Leave a HomeAdvisor Review
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 mx-auto">
-            <h6 className="text-brand text-xl font-bold mb-4">LINKS</h6>
-            <ul className="text-md space-y-2">
-              <li><Link href="/about" className="text-brand hover:text-gray-900 dark:hover:text-white">About</Link></li>
-              <li><Link href="/services" className="text-brand hover:text-gray-900 dark:hover:text-white">Services</Link></li>
-              <li><Link href="/office-furniture-systems" className="text-brand hover:text-gray-900 dark:hover:text-white">Furniture Systems</Link></li>
-              <li><Link href="/locations" className="text-brand hover:text-gray-900 dark:hover:text-white">Locations</Link></li>
-              <li><Link href="/service-areas" className="text-brand hover:text-gray-900 dark:hover:text-white">Service Areas</Link></li>
-              <li><Link href="/guides" className="text-brand hover:text-gray-900 dark:hover:text-white">Guides</Link></li>
-              <li><Link href="/blog" className="text-brand hover:text-gray-900 dark:hover:text-white">Resources</Link></li>
-              <li><Link href="/contact" className="text-brand hover:text-gray-900 dark:hover:text-white">Contact</Link></li>
             </ul>
           </div>
         </div>

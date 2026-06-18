@@ -61,14 +61,14 @@ export default function NavBar() {
             </svg>
           </button>
           <div className="hidden lg:inline-block p-5">
-            <NavLinks />
+            <NavLinks layout="horizontal" />
           </div>
         </div>
       </div>
       <div className={`fixed transition-transform duration-300 ease-in-out flex justify-center left-0 w-full h-auto rounded-md p-8 md:p-12 surface-card lg:hidden shadow-xl top-14 ${isOpen ? 'block' : 'hidden'}`}>
         <div className="flex flex-col space-y-6 w-full max-w-md">
           <SiteSearch id="mobile-site-search" onNavigate={() => setIsOpen(false)} />
-          <NavLinks />
+          <NavLinks layout="stacked" onNavigate={() => setIsOpen(false)} />
         </div>
       </div>
     </nav>
