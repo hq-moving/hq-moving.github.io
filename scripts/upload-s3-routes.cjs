@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 
 const outDir = path.join(__dirname, '..', 'out');
 const bucket = process.env.S3_BUCKET || 's3://headquartersmoving.com';
-const manifestPath = path.join(__dirname, '.s3-directory-route-conflicts.json');
+const manifestPath = path.join(__dirname, '.s3-html-routes.json');
 
 if (process.env.NEXT_STATIC_EXPORT === 'false') {
   console.log('Skipping S3 route uploads (NEXT_STATIC_EXPORT=false)');
@@ -12,29 +12,27 @@ if (process.env.NEXT_STATIC_EXPORT === 'false') {
 }
 
 if (!fs.existsSync(manifestPath)) {
-  console.log('No directory route conflicts to upload.');
+  console.log('No HTML routes to upload.');
   process.exit(0);
 }
 
-const htmlPaths = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+const htmlRoutes = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
-for (const htmlPath of htmlPaths) {
-  const routeName = path.basename(htmlPath, '.html');
-  const dir = path.dirname(htmlPath);
-  const extensionlessDir = path.join(dir, routeName);
+for (const { source, key } of htmlRoutes) {
+  const filePath = path.join(outDir, source);
 
-  if (!fs.existsSync(extensionlessDir) || !fs.statSync(extensionlessDir).isDirectory()) {
+  if (!fs.existsSync(filePath)) {
+    console.warn(`Skipping missing route file: ${source}`);
     continue;
   }
 
-  const s3Key = path.relative(outDir, extensionlessDir).replace(/\\/g, '/');
-  const destination = `${bucket}/${s3Key}`;
+  const destination = `${bucket}/${key}`;
 
   execSync(
-    `aws s3 cp "${htmlPath}" "${destination}" --content-type text/html`,
+    `aws s3 cp "${filePath}" "${destination}" --content-type text/html --cache-control "public, max-age=0, must-revalidate"`,
     { stdio: 'inherit' }
   );
-  console.log(`Uploaded flat S3 route: /${s3Key}`);
+  console.log(`Uploaded HTML route: /${key}`);
 }
 
-fs.unlinkSync(manifestPath);
+console.log(`Set text/html content-type on ${htmlRoutes.length} extensionless routes`);

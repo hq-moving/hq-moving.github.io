@@ -12,7 +12,7 @@
 /build
 /.next
 /out
-/scripts/.s3-directory-route-conflicts.json
+/scripts/.s3-html-routes.json
 
 # misc
 .DS_Store

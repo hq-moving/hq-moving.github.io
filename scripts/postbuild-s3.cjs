@@ -7,30 +7,31 @@ if (process.env.NEXT_STATIC_EXPORT === 'false') {
 }
 
 const outDir = path.join(__dirname, '..', 'out');
-const manifestPath = path.join(__dirname, '.s3-directory-route-conflicts.json');
+const manifestPath = path.join(__dirname, '.s3-html-routes.json');
+const htmlRoutes = [];
 
 function writeExtensionlessRoute(htmlPath, dir, routeName) {
   const extensionlessPath = path.join(dir, routeName);
   const relativeBase = path.relative(outDir, extensionlessPath).replace(/\\/g, '/');
+  const htmlRelative = path.relative(outDir, htmlPath).replace(/\\/g, '/');
 
   if (fs.existsSync(extensionlessPath)) {
     const stat = fs.statSync(extensionlessPath);
     if (stat.isDirectory()) {
       const indexPath = path.join(extensionlessPath, 'index.html');
       fs.copyFileSync(htmlPath, indexPath);
+      htmlRoutes.push({ source: htmlRelative, key: relativeBase });
       console.log(`S3 route: /${relativeBase}/ (index.html)`);
-      return 'directory-conflict';
+      return;
     }
   }
 
   fs.copyFileSync(htmlPath, extensionlessPath);
+  htmlRoutes.push({ source: relativeBase, key: relativeBase });
   console.log(`S3 route: /${relativeBase}`);
-  return 'extensionless-file';
 }
 
 function createExtensionlessRoutes(dir) {
-  const directoryConflicts = [];
-
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const fullPath = path.join(dir, entry.name);
 
@@ -45,13 +46,8 @@ function createExtensionlessRoutes(dir) {
     const routeName = entry.name.slice(0, -5);
     if (routeName === '404' || routeName === 'index') continue;
 
-    const result = writeExtensionlessRoute(fullPath, dir, routeName);
-    if (result === 'directory-conflict') {
-      directoryConflicts.push(fullPath);
-    }
+    writeExtensionlessRoute(fullPath, dir, routeName);
   }
-
-  return directoryConflicts;
 }
 
 if (!fs.existsSync(outDir)) {
@@ -59,11 +55,11 @@ if (!fs.existsSync(outDir)) {
   process.exit(1);
 }
 
-const directoryConflicts = createExtensionlessRoutes(outDir);
+createExtensionlessRoutes(outDir);
 
-if (directoryConflicts.length > 0) {
-  fs.writeFileSync(manifestPath, JSON.stringify(directoryConflicts, null, 2));
-  console.log(`Directory route conflicts: ${directoryConflicts.length} (requires upload-s3-routes)`);
+if (htmlRoutes.length > 0) {
+  fs.writeFileSync(manifestPath, JSON.stringify(htmlRoutes, null, 2));
+  console.log(`HTML routes for S3 upload: ${htmlRoutes.length}`);
 } else if (fs.existsSync(manifestPath)) {
   fs.unlinkSync(manifestPath);
 }
