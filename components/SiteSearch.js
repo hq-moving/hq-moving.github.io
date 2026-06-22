@@ -97,7 +97,7 @@ export default function SiteSearch({ className = '', onNavigate, id: idProp }) {
           aria-controls={listboxId}
           aria-autocomplete="list"
           autoComplete="off"
-          className="input-field w-full py-2 pl-9 pr-3 text-sm shadow-sm focus:border-accent focus:ring-2 focus:ring-accent-light"
+          className="input-field w-full min-w-[14rem] py-2 pl-9 pr-3 text-sm shadow-sm focus:border-accent focus:ring-2 focus:ring-accent-light"
         />
       </div>
 

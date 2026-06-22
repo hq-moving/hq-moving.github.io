@@ -51,8 +51,8 @@ export default function NavBar() {
           </Link>
         </div>
 
-        <div className="hidden md:flex flex-1 max-w-md lg:max-w-lg mx-2 lg:mx-6">
-          <SiteSearch />
+        <div className="hidden md:flex flex-1 min-w-[14rem] max-w-md lg:max-w-lg mx-2 lg:mx-4 shrink-0">
+          <SiteSearch className="w-full min-w-[14rem]" />
         </div>
 
         <div className="flex items-center shrink-0">
@@ -78,7 +78,9 @@ export default function NavBar() {
       </div>
       <div className={`fixed transition-transform duration-300 ease-in-out flex justify-center left-0 w-full h-auto rounded-md p-8 md:p-12 surface-card lg:hidden shadow-xl top-14 ${isOpen ? 'block' : 'hidden'}`}>
         <div className="flex flex-col space-y-6 w-full max-w-md">
-          <SiteSearch id="mobile-site-search" onNavigate={() => setIsOpen(false)} />
+          <div className="md:hidden">
+            <SiteSearch id="mobile-site-search" onNavigate={() => setIsOpen(false)} />
+          </div>
           <NavLinks layout="stacked" onNavigate={() => setIsOpen(false)} />
         </div>
       </div>
